@@ -11,10 +11,14 @@
    --onSecC:#2B151E;
    --terC:#;
    --onTerC:#;
-	--bg1:#964068;
-	--bg2:#964068;
-	--bg3:#964068;
+	--bg1:#622947;
+	--bg2:#8a4369;
+	--bg3:#fff6f9;
 	--brdrR:40px;
+	--boxS1:inset 0px 20px 23px var(--bg3);
+	--boxS2:inset 0px 20px 23px var(--bg2);
+	--boxS3:inset 0px 20px 23px var(--bg2);
+	--boxS4:inset 0px -20px 23px var(--bg2);
 }
 @media (prefers-color-scheme: dark) {
 	:root{
@@ -45,15 +49,13 @@ body
 	position:absolute;
 	top:0;
 	left:0;
-	height: 100%;
-	height: 100vh !important;
+	height: 100vh;
 	width: 100%;
 	font-family: 'Rubik';
   font-weight: 400;
-	background-color:var(--bg1);	
 	background-blend-mode:;
 	background-repeat: repeat;
-	*/
+
 }
 @font-face
 {
@@ -77,20 +79,37 @@ body
 }
 #bg
 {
-	position: absolute;
+	position: fixed;
+	height: 100vh;
 	width:100%;
-  /*background-image: linear-gradient(-26deg,rgba(0,255,240,.08),var(--aColor),var(--aColor),rgba(128,0,255,.08));*/
-  background-image: linear-gradient(rgba(255,255,255,.02) 1%,rgba(0,0,0,0)5%,rgba(0,0,0,0)95%,rgba(0,255,255,.02));
-	z-index: 10;
-	background-size: 300% 100%;
-	/*box-shadow: 200px 200px 200px -200px
-		rgba(128,0,255,.08)
-		inset,
-		-200px -200px 200px -200px
-		rgba(0,255,240,.08)	
-		inset;	*/
+	background-image: linear-gradient(90deg, #8E1C50 0%, #964068 51.2%, #BE6199 96.61%);
+	z-index: -1;
+	background-size: 100% 100%;
+	/*box-shadow: 200px 200px 200px -200px rgba(128,0,255,.08) inset, -200px -200px 200px -200px rgba(0,255,240,.08) inset;	*/
 
 }
+#bgL,#bgR
+{
+	position: fixed;
+	top:0%;
+	height: 100%;
+	width:50%;
+	z-index: -1;
+	background-size: 100% 100% !important;
+
+}
+#bgL
+{
+	right:50%;
+	background:url('bgLeft.png')  no-repeat;		
+	
+}
+#bgR
+{
+	background:url('bgRight.png')  no-repeat;		
+	left:50%;
+}
+
 /*
 header
 {
@@ -130,11 +149,12 @@ button
 	left:0%;
 	z-index: 61;
   font-family: 'Reenie Beanie', cursive;
-	background: var(--onPriC);
+	background: var(--bg1);
 	color: var(--priC);
 	font-size:3.6vh;
-	border-radius: var(--brdrR);
+	border-radius: 0px 0px var(--brdrR) var(--brdrR);
 	overflow: hidden;
+	box-shadow: var(--boxS4);
 }
 #bgHeader
 {
@@ -145,7 +165,8 @@ button
 	margin-bottom:93vh;
 	left:5%;
 	background: var(--bg1);
-	
+	box-shadow:var(--boxS4);
+	border-radius: 0px 0px 10px 10px;
 }
 #drawerIcon,#drawerIconClose
 {
@@ -210,25 +231,30 @@ button
 	font-family: 'Reem Kufi';
 	background:var(--priC);
 	color:var(--onPriC);
+
 }
-.tiktok,.instagram
+.card.tiktok,.card.instagram
 {
 	background-blend-mode:difference;
 	position: relative;
 	float:left;
-	height: 40%;
-	width: 20%;
-	margin: 0% 0% 0% 20%;
+	height: 10%;
+	width: 42.5%;
+	box-shadow: var(--boxS2);
 }
-.tiktok
+.card.tiktok
 {
-	background:url('tik.svg') center no-repeat;		
+	background:url('tik.svg') center no-repeat var(--bg1) !important;		
 	background-size:50%;
+	margin:5% 2.5% 5% 5% !important;
+
 }
 .instagram
 {
-	background:url('ing.svg') center no-repeat;		
+	background:url('ing.svg') center no-repeat var(--bg1) !important;		
 	background-size:60%;
+	margin:5% 5% 5% 2.5% !important;
+
 }
 .artTwi.b2,.artTik.b2,.artIng.b2
 {
@@ -261,6 +287,7 @@ button
 	width: 90%;
   border-radius: var(--brdrR);
 	background: var(--priC);
+	box-shadow: var(--boxS1);
 }
 img.card
 {
