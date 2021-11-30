@@ -28,15 +28,15 @@
    --onSec:#FFFFFF;
    --ter:#7E5537;
    --onTer:#FFFFFF;
-   --priC:#FFD9E7;
-   --onPriC:#622947;/*3E0022*/
+   --priC:#792950;
+   --onPriC:#FFD9E7;/*3E0022*/
    --secC:#FED9E5;
    --onSecC:#2B151E;
    --terC:#;
    --onTerC:#;
-	--bg1:#622947;
-	--bg2:#8a4369;
-	--bg3:#fff6f9;
+	--bg1:#481f35;
+	--bg2:#7b2c57;
+	--bg3:#9f3a6b;
 	--brdrR:40px;
 	--boxS1:inset 0px 20px 23px var(--bg3);
 	--boxS2:inset 0px 20px 23px var(--bg2);
@@ -80,7 +80,7 @@ body
 @keyframes pageSlideIn
 {
 	0%{opacity:0;margin-top:5px};
-	100%{opacity:1;margin-top:0%};
+	100%{opacity:0;margin-top:0%};
 }
 .off
 {
@@ -159,7 +159,7 @@ button
 	z-index: 61;
   font-family: 'Reenie Beanie', cursive;
 	background: var(--bg1);
-	color: var(--priC);
+	color: var(--onPri);
 	font-size:3.6vh;
 	border-radius: 0px 0px var(--brdrR) var(--brdrR);
 	overflow: hidden;
@@ -300,7 +300,8 @@ button
 }
 img.card
 {
-
+	background:black;
+	box-shadow: none;
 }
 .card.text
 {
@@ -311,8 +312,8 @@ img.card
 	line-height: 150%;
 	/* or 26px */
 
-	display: flex;
-	align-items: center;
+	/*! display: flex; */
+	/*! align-items: center; */
 	text-align: center;
 }
 .card.event
