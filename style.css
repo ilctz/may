@@ -22,17 +22,26 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root{
-   --pri:#FFB0D1;
-   --onPri:#5D1039;
-   --sec:#E1BDC9;
-   --onSec:#412A33;
-   --ter:#F1BC97;
-   --onTer:#49280E;
-   --priC:#792950;
-   --onPriC:#FFD9E7;
-   --secC:#5A3F49;
-   --onSecC:#FED9E5;
-	 --bg1:#551b36;
+   --pri:#964068;
+   --onPri:#FFFFFF;
+   --sec:#735761;
+   --onSec:#FFFFFF;
+   --ter:#7E5537;
+   --onTer:#FFFFFF;
+   --priC:#FFD9E7;
+   --onPriC:#622947;/*3E0022*/
+   --secC:#FED9E5;
+   --onSecC:#2B151E;
+   --terC:#;
+   --onTerC:#;
+	--bg1:#622947;
+	--bg2:#8a4369;
+	--bg3:#fff6f9;
+	--brdrR:40px;
+	--boxS1:inset 0px 20px 23px var(--bg3);
+	--boxS2:inset 0px 20px 23px var(--bg2);
+	--boxS3:inset 0px 20px 23px var(--bg2);
+	--boxS4:inset 0px -20px 23px var(--bg2);
 		
 	}
 }
