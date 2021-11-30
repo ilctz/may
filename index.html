@@ -16,23 +16,31 @@
 
 	<body>
 		<header>
-			<button id="title" onclick="toggleDrawer(1);pickPage(0)">Martha May</button>
-			<button id="drawerIcon" onclick="toggleDrawer()"></button>
-			<div id="drawerOverlay">
-				<button class="drawer" onclick="toggleDrawer(1);pickPage(1)">Events</button>
-				<button class="drawer" onclick="toggleDrawer(1);pickPage(2)">Demo</button>
-				<button class="drawer" onclick="toggleDrawer(1);pickPage(3)">Contact</button>
-				<div class="drawer socials">
-					<div class="tiktok"></div>
-					<div class="instagram"></div>
-				</div>
-			</div>
+			<div id="bgHeader"></div>
+
+			<button id="title" onclick="pickPage(1)">Martha May</button>
+			<button id="drawerIcon" class="on" onclick="pickPage(0)"></button>
+			<button id="drawerIconClose" class="" onclick="pickPage(99)"></button>
+
 		</header>
     <!-- <div id="bg"> -->
+		<div id="drawerOverlay" class="page">
+
+			<div class="space"></div>
+
+			<button class="card drawer" onclick="pickPage(2);previousPage = currentPage">Events</button>
+			<button class="card drawer" onclick="pickPage(3)">Demo</button>
+			<button class="card drawer" onclick="pickPage(4)">Contact</button>
+			<div class="drawer socials">
+				<div class="tiktok"></div>
+				<div class="instagram"></div>
+			</div>
+		</div>
 		<div id="main" class="page on">
 			<div class="space"></div>
 			<img src="c1.jpg" class="card">
 			<div class="card text">Martha May is an emerging artist  coming straight from Croatia, she has always been passionate about music  and recently started dedicating herself to songwriting.</div>
+			<img src="c2.jpg" class="card">
     <!-- <div class="tst t1"></div>
     <div class="tst t2"></div> -->
 

@@ -14,6 +14,7 @@
 	--bg1:#964068;
 	--bg2:#964068;
 	--bg3:#964068;
+	--brdrR:40px;
 }
 @media (prefers-color-scheme: dark) {
 	:root{
@@ -60,7 +61,20 @@ body
   font-family: 'Reenie Beanie', cursive;
   font-family: 'Reem Kufi', sans-serif;
 }
-
+.on
+{
+  animation:pageSlideIn .12s 1 !important;
+	display: block !important;
+}
+@keyframes pageSlideIn
+{
+	0%{opacity:0;margin-top:5px};
+	100%{opacity:1;margin-top:0%};
+}
+.off
+{
+	display:none;
+}
 #bg
 {
 	position: absolute;
@@ -77,6 +91,7 @@ body
 		inset;	*/
 
 }
+/*
 header
 {
 	position: fixed;
@@ -84,6 +99,16 @@ header
 	width: 100%;
 	top:0%;
 	left:0%;
+	z-index: 60;
+}*/
+
+header
+{
+	position: fixed;
+	height: 8%;
+	width: 90%;
+	margin-top:5%;
+	left:5%;
 	z-index: 60;
 }
 .page
@@ -107,9 +132,22 @@ button
   font-family: 'Reenie Beanie', cursive;
 	background: var(--onPriC);
 	color: var(--priC);
-	font-size:3vh;
+	font-size:3.6vh;
+	border-radius: var(--brdrR);
+	overflow: hidden;
 }
-#drawerIcon
+#bgHeader
+{
+	position: fixed;
+	height: 10vh;
+	width: 90%;
+	bottom:0%;
+	margin-bottom:93vh;
+	left:5%;
+	background: var(--bg1);
+	
+}
+#drawerIcon,#drawerIconClose
 {
 	position: absolute;
 	height: 100%;
@@ -117,13 +155,16 @@ button
 	top:0%;
 	left:0%;
 	z-index: 62;
-	background:url('hamburger.svg') center no-repeat;		
-	background-size:50%;
+	background-size:60% !important;
+	display:none;
 }
-.drawerOn
+#drawerIcon
 {
-	background:url('close.svg') center no-repeat !important;		
-	background-size:50% !important;
+	background:url('hamburger.svg') center no-repeat;		
+}
+#drawerIconClose
+{
+	background:url('close.svg') center no-repeat;		
 }
 #drawerOverlay
 {
@@ -131,26 +172,17 @@ button
 	position: absolute;
 	height: 100vh;
 	width: 100%;
-	top:10vh;
+	/*! top:10vh; */
 	left:0%;
-	z-index: 62;
-	background: var(--pri);
+	z-index: 50;
+	/*! background: var(--pri); */
 }
-.on
-{
-  animation:pageSlideIn .08s 1 !important;
-	display: block !important;
-}
-@keyframes pageSlideIn
-{
-	0%{backdrop-filter: blur(0px);opacity:0;margin-top:5px};
-	100%{backdrop-filter: blur(80px);opacity:1;margin-top:0%};
-}
+
 #events,#demo,#contact
 {
 	display:none;
 }
-button.drawer,.socials
+/*button.drawer,.socials
 {
 	position: relative;
 	float:top;
@@ -161,6 +193,23 @@ button.drawer,.socials
 	background:none;
 	letter-spacing: 0.26em;
 	font-family: 'Reem Kufi';
+	background:var(--priC);
+	color:var(--onPriC);
+}*/
+.card.drawer
+{
+	position: relative;
+	float:top;
+	height: 10%;
+	/*! width: 100%; */
+	font-size:3vh;
+	/*! margin:5% 0% 5% 0%; */
+	color:var(--onSec);
+	background:none;
+	letter-spacing: 0.26em;
+	font-family: 'Reem Kufi';
+	background:var(--priC);
+	color:var(--onPriC);
 }
 .tiktok,.instagram
 {
@@ -210,7 +259,7 @@ button.drawer,.socials
 	float:top;
 	margin: 5% 5% 0%;
 	width: 90%;
-  border-radius: 40px;
+  border-radius: var(--brdrR);
 	background: var(--priC);
 }
 img.card
