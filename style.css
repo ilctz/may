@@ -1,5 +1,6 @@
+/*
 :root{
-	--1c:url('bg.png') #FFD9E7;
+ 
 	--1c:#F1FFCC;
 	--1ch:#FFFCE9;
 	--1s:#F1FFE0;
@@ -26,7 +27,56 @@
 	--bg3:#D04B77;
 	
 	--brdrR:40px;
-	--glblShadow:inset 0px 0px 23px;
+	--glblShadow:inset 0px 0px 10px;
+	--glblShadow2:0px 2px 4px rgba(0,0,0,.1) , 0px 4px 10px rgba(0,0,0,.1);
+	--glblShadow3:inset 0px 0px 0px 1px rgba(255,255,255,.2);
+	
+	--boxs1:var(--glblShadow3),var(--glblShadow) var(--1s),var(--glblShadow2);
+	--boxs1h:var(--glblShadow) var(--1sh);
+	
+	--boxs2:var(--glblShadow3),var(--glblShadow) var(--2s),var(--glblShadow2);
+	--boxs2h:var(--glblShadow) var(--2sh);
+	
+	--boxs3:var(--glblShadow3),var(--glblShadow) var(--3s),var(--glblShadow2);
+	--boxs3h:var(--glblShadow3),var(--glblShadow) var(--3s),var(--glblShadow2);
+	
+	
+}
+	.card.event,.card.drawer,.tiktok,.instagram,.spotify
+	{
+		border-radius: 99px !important;
+}
+	*/
+:root{
+	--:#;
+	
+	--1c:#FFE8F0;
+	--1ch:#FFFCE9;
+	--1s:#E7FFC9;
+	--1sh:#FFF7E0;
+	--1co:#3e0f25;
+	--1coh:#622947;
+	
+	--2c:#FFE8F0;
+	--2ch:#792e56;
+	--2s:#ceffd1;
+	--2sh:#ae5c87;
+	--2co:#E9FFF0;
+	--2coh:#FED9E5;
+	
+	--3c:#8e2278;
+	--3ch:#842156;
+	--3s:#d52498;
+	--3sh:#ae5c87;
+	--3co:#E9FFF0;
+	--3coh:#FED9E5;
+	
+	--bg1:#812E53;
+	--bg2:#ac4374;
+	--bg3:#D04B77;
+	
+	--brdrR:40px;
+	--glblShadow:inset 0px 0px 10px;
 	--glblShadow2:0px 2px 4px rgba(0,0,0,.1) , 0px 4px 10px rgba(0,0,0,.1);
 	--glblShadow3:inset 0px 0px 0px 1px rgba(255,255,255,.2);
 	
@@ -44,20 +94,17 @@
 	.card.event,.card.drawer,.tiktok,.instagram,.spotify
 	{
 		border-radius: 99px !important;
-	}
-	--:#;
-
 }
-
+*/
 html{
 	scroll-behavior: smooth;
-	-webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 
 body
 {
+	-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none ; 
 	margin:0px;
 	position:absolute;
 	top:0;
@@ -155,9 +202,35 @@ header
 	z-index: 60;
 	border-radius: 0px 0px var(--brdrR) var(--brdrR);
 	overflow: hidden;
+	overflow:visible;
 	box-shadow: var(--boxs3);
 	background: var(--3c);
+}/*
+header::after
+{
+	position: fixed;
+	height: 100px;
+	width: 100px;
+	background:url('flower1.png');
+	top:3px;
+	right:-3%;
+	content: 'a';
+	background-size:100%;
+	color:transparent;
+}*/
+header::after
+{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background:url('flower1.png');
+	bottom:-23px;
+	right:-28px;
+	content: 'a';
+	background-size:100%;
+	color:transparent;
 }
+
 .page
 {
 	display:none;
@@ -483,7 +556,7 @@ img.card
 	--1ch:#FFF;
 	--1s:#5B4D99;
 	--1sh:#FFF;
-	--1co:#d9e6fb;
+	--1co:#e1f7ff;
 	--1coh:#622947;
 	
 	--2c:#553c73;
