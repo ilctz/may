@@ -9,6 +9,13 @@ var card = document.getElementsByClassName("card");
 var currentPage = 1;
 var previousPage = 1;
 
+setTimeout(function(){
+	window.scrollTo(0, 0);
+}, 1)
+setTimeout(function(){
+	document.getElementById('curtains').style.display = "none"
+}, 1000)
+
 function pickPage(number)
 {
 	if (number == 99){number = previousPage}
@@ -26,4 +33,5 @@ function pickPage(number)
 		card[i].classList.add("on");
 	}
 	page[number].classList.add("on");
+	window.scrollTo(0, 0);
 }

@@ -96,7 +96,7 @@ body
 	width:100%;
 	left:0%;
 	background-image: linear-gradient(90deg, var(--bg1) 0%,  var(--bg2) 50%,  var(--bg3) 100%);
-	background-image:url('backg.png');
+	background-image:url('backgMobile.png');
 	background-position: left;
 	background-size: 100% 100%;
 	z-index: -2;
@@ -115,14 +115,14 @@ body
 #bgL
 {
 	left:0%;
-	background:url('bgLeft.png')  no-repeat;		
+	background:url('bgLeftMobile.png')  no-repeat;		
 	background-position: left;
 	
 	
 }
 #bgR
 {
-	background:url('bgRight.png')  no-repeat;		
+	background:url('bgRightMobile.png')  no-repeat;		
 	right:0%;
 	background-position: right;
 }
@@ -331,7 +331,23 @@ header::after
 img.card
 {
 	background:var(--1c);
-	box-shadow: none;
+}
+.frst::after
+{
+	position: absolute;
+	height: 240px;
+	width: 183px;
+	background:url('hat.png');
+	bottom:3px;
+	right:8px;
+	content: 'a';
+	background-size:100%;
+	color:transparent;
+}
+.card.ytbe
+{
+	width: 90%;
+	height:253px;
 }
 .card.text
 {
@@ -421,7 +437,7 @@ img.card
 
 
 
-=
+
 @media (min-width:500px)
 {
 }
@@ -437,9 +453,38 @@ img.card
 		left:calc(50% - 225px);
 		width: 450px;
 	}
+	
+}
+@media (min-width:1000px) and (prefers-color-scheme: dark)
+{
+  #bgL
+	{
+		background-image:url('bgLeftDark.png');		
+	}
+  #bgR
+	{
+		background-image:url('bgRightDark.png');		
+	}
+	#bg
+	{
+		background-image:url('backgDark.png') !important;		
+	}
 }
 @media (min-width:1000px)
 {
+
+	#bgL
+	{
+		background-image:url('bgLeft.png');		
+	}
+  #bgR
+	{
+		background-image:url('bgRight.png');		
+	}
+	#bg
+	{
+		background-image:url('backg.png');		
+	}
   #drawerIcon,#drawerIconClose,#bgHeader
 	{
 		display: none !important;
@@ -538,15 +583,15 @@ img.card
 	
 	#bg
 	{
-		background-image:url('backgDark.png');
+		background-image:url('backgDarkMobile.png');
 	}
 	#bgL
 	{
-		background-image:url('bgLeftDark.png');		
+		background-image:url('bgLeftDarkMobile.png');		
 	}
 	#bgR
 	{
-		background-image:url('bgRightDark.png');		
+		background-image:url('bgRightDarkMobile.png');		
 	}
 	*/
 }
