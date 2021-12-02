@@ -1,72 +1,24 @@
-/*
-:root{
- 
-	--1c:#F1FFCC;
-	--1ch:#FFFCE9;
-	--1s:#F1FFE0;
-	--1sh:#FFF7E0;
-	--1co:#2b5743;
-	--1coh:#622947;
-	
-	--2c:#9dd566;
-	--2ch:#792e56;
-	--2s:#94e367;
-	--2sh:#ae5c87;
-	--2co:#E9FFF0;
-	--2coh:#FED9E5;
-	
-	--3c:#403c73;
-	--3ch:#792e56;
-	--3s:#554f9b;
-	--3sh:#ae5c87;
-	--3co:#E9FFF0;
-	--3coh:#FED9E5;
-	
-	--bg1:#812E53;
-	--bg2:#ac4374;
-	--bg3:#D04B77;
-	
-	--brdrR:40px;
-	--glblShadow:inset 0px 0px 10px;
-	--glblShadow2:0px 2px 4px rgba(0,0,0,.1) , 0px 4px 10px rgba(0,0,0,.1);
-	--glblShadow3:inset 0px 0px 0px 1px rgba(255,255,255,.2);
-	
-	--boxs1:var(--glblShadow3),var(--glblShadow) var(--1s),var(--glblShadow2);
-	--boxs1h:var(--glblShadow) var(--1sh);
-	
-	--boxs2:var(--glblShadow3),var(--glblShadow) var(--2s),var(--glblShadow2);
-	--boxs2h:var(--glblShadow) var(--2sh);
-	
-	--boxs3:var(--glblShadow3),var(--glblShadow) var(--3s),var(--glblShadow2);
-	--boxs3h:var(--glblShadow3),var(--glblShadow) var(--3s),var(--glblShadow2);
-	
-	
-}
-	.card.event,.card.drawer,.tiktok,.instagram,.spotify
-	{
-		border-radius: 99px !important;
-}
-	*/
 :root{
 	--:#;
 	
-	--1c:#FFE8F0;
-	--1ch:#FFFCE9;
-	--1s:#E7FFC9;
-	--1sh:#FFF7E0;
-	--1co:#3e0f25;
-	--1coh:#622947;
+	--1c:#E5FFF0;
+	--1ch:#F2F9F0;
+	--1s:#F0FCE9;
+	--1sh:#FFFAEA;
+	--1co:#2b4610;
+	--1coh:#5a882d;
 	
-	--2c:#FFE8F0;
-	--2ch:#792e56;
-	--2s:#ceffd1;
-	--2sh:#ae5c87;
+	--2c:#EEFFF7;
+	--2ch:#f6fdf6;
+	--2s:#b1ffb6b0;
+	--2sh:#d7ff9e;
 	--2co:#E9FFF0;
 	--2coh:#FED9E5;
 	
 	--3c:#8e2278;
-	--3ch:#842156;
-	--3s:#d52498;
+	--3c:linear-gradient(120.14deg, #D8DB49 0%, #38D3CA 98.67%), linear-gradient(0deg, #C8B44D, #C8B44D);;
+	--3ch:linear-gradient(120.14deg, #D8DBF9 0%, #38D3CA 98.67%), linear-gradient(0deg, #C8B44D, #C8B44D);;
+	--3s:#86ff9fa6;
 	--3sh:#ae5c87;
 	--3co:#E9FFF0;
 	--3coh:#FED9E5;
@@ -77,14 +29,14 @@
 	
 	--brdrR:40px;
 	--glblShadow:inset 0px 0px 10px;
-	--glblShadow2:0px 2px 4px rgba(0,0,0,.1) , 0px 4px 10px rgba(0,0,0,.1);
+	--glblShadow2:0px 0px 4px rgba(0,0,0,.05) , 0px 4px 10px rgba(0,0,0,.1);
 	--glblShadow3:inset 0px 0px 0px 1px rgba(255,255,255,.2);
 	
-	--boxs1:var(--glblShadow3),var(--glblShadow) var(--1s),var(--glblShadow2);
-	--boxs1h:var(--glblShadow) var(--1sh);
+	--boxs1:var(--glblShadow3),var(--glblShadow) var(--1sh),var(--glblShadow2);
+	--boxs1h:var(--glblShadow3),var(--glblShadow) var(--1sh);
 	
 	--boxs2:var(--glblShadow3),var(--glblShadow) var(--2s),var(--glblShadow2);
-	--boxs2h:var(--glblShadow) var(--2sh);
+	--boxs2h:var(--glblShadow3),var(--glblShadow) var(--2sh),var(--glblShadow2);
 	
 	--boxs3:var(--glblShadow3),var(--glblShadow) var(--3s),var(--glblShadow2);
 	--boxs3h:var(--glblShadow3),var(--glblShadow) var(--3s),var(--glblShadow2);
@@ -115,7 +67,7 @@ body
   font-weight: 400;
 	background-blend-mode:;
 	background-repeat: repeat;
-
+  background:var(--1c)
 }
 @font-face
 {
@@ -263,7 +215,7 @@ header::after
 	color: var(--3co);
 	font-size:35px;
 	/*! border-radius: 0px 0px var(--brdrR) var(--brdrR); */
-	/*! overflow: hidden; */
+	overflow: hidden;
 	/*! box-shadow: var(--boxs3); */
 }
 
@@ -335,7 +287,6 @@ header::after
 	font-weight: bold;
 	background:var(--1c);
 	color:var(--1co);
-
 }
 .card.tiktok,.card.instagram,.card.spotify
 {
@@ -350,21 +301,21 @@ header::after
 .card.tiktok
 {
 	background:url('tik.svg') center no-repeat var(--2c) !important;		
-	background-size:50%;
+	background-size:50% 50% !important;
 	margin:5% calc(5%/3) 5% 5% !important;
 
 }
 .card.instagram
 {
 	background:url('ing.svg') center no-repeat var(--2c) !important;		
-	background-size:60%;
+	background-size:50% 50% !important;
 	margin:5% calc(5%/3) 5% calc(5%/3) !important;
 
 }
 .card.spotify
 {
 	background:url('spo.png') center no-repeat var(--2c) !important;		
-	background-size:34% !important;
+	background-size:28% !important;
 	margin:5% 5% 5% calc(5%/3) !important;
 
 }
@@ -379,7 +330,7 @@ header::after
 
 img.card
 {
-	background:black;
+	background:var(--1c);
 	box-shadow: none;
 }
 .card.text
@@ -495,7 +446,7 @@ img.card
 	}
 		#title
 	{
-		font-size:50px;
+		font-size:42px;
 		height: 100%;
 	}
 	#drawerOverlay
@@ -511,10 +462,9 @@ img.card
 		border-radius: var(--brdrR) !important;
 		
 	}
-}
-@media (min-width:1000px)
-{
-	
+	#bg
+	{
+	}
   body
 	{
 		left: 10%;
@@ -541,10 +491,15 @@ img.card
 		color:var(--1coh);
 		box-shadow: var(--boxs1h);
 	}
-	.card.spotify:hover,.card.instagram:hover,.card.tiktok:hover,#title:hover
+	.card.spotify:hover,.card.instagram:hover,.card.tiktok:hover
 	{
 		background-color: var(--2ch) !important;
 		box-shadow: var(--boxs2h);
+	}
+	#title:hover
+	{
+		/*background-color: var(--3ch) !important;*/
+		/*! box-shadow: var(--boxs3h); */
 	}
 }
 
@@ -552,21 +507,21 @@ img.card
 	:root{
 
 	--1c:url('bg.png') #FFD9E7;
-	--1c:#553C73;
-	--1ch:#FFF;
-	--1s:#5B4D99;
-	--1sh:#FFF;
+	--1c:#403C73;
+	--1ch:#373364;
+	--1s:#5D5097;
+	--1sh:#5C3D9F;
 	--1co:#e1f7ff;
-	--1coh:#622947;
+	--1coh:#e0e1ff;
 	
-	--2c:#553c73;
-	--2ch:#792e56;
-	--2s:#5c4f9b;
-	--2sh:#ae5c87;
+	--2c:#3c386a;
+	--2ch:#2b2053;
+	--2s:#5a4ba4;
+	--2sh:#5d5293;
 	--2co:#E9FFF0;
 	--2coh:#FED9E5;
 		
-	--3c:#403c73;
+	--3c:linear-gradient(120.14deg, #4F386B -10.72%, #332E6B 30.19%, #332E6B 60.19%, #388C82 120.19%);
 	--3ch:#792e56;
 	--3s:#554f9b;
 	--3sh:#ae5c87;
@@ -576,8 +531,8 @@ img.card
 	--bg1:#812E53;
 	--bg2:#ac4374;
 	--bg3:#D04B77;	
+		
 	--glblShadow3:inset 0px 0px 0px 1px rgba(0,0,0,.1);
-	
 	}
 
 	
