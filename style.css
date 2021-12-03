@@ -314,8 +314,8 @@ header::after
 }
 .card.spotify
 {
-	background:url('spo.png') center no-repeat var(--2c) !important;		
-	background-size:28% !important;
+	background:url('spo.svg') center no-repeat var(--2c) !important;		
+	background-size:45% 45% !important;
 	margin:5% 5% 5% calc(5%/3) !important;
 
 }
