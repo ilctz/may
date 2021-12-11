@@ -35,3 +35,28 @@ function pickPage(number)
 	page[number].classList.add("on");
 	window.scrollTo(0, 0);
 }
+var indexSlide = 0;
+slideShow();
+function slideShow() {
+	var slides = document.getElementsByClassName("ss");
+	for (i = 0;i < slides.length; i++){
+		slides[i].classList.remove("on");
+	}
+	indexSlide++;
+	if (indexSlide > slides.length) {indexSlide = 1}
+  slides[indexSlide-1].classList.add("on");
+	setTimeout(slideShow, 3500);
+}
+
+//
+// function showSlides() {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}
+//   slides[slideIndex-1].style.display = "block";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
