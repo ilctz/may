@@ -393,24 +393,38 @@ img.card
 #ss3{background-image: url('cB.jpg');}
 #ss4{background-image: url('cC.jpg');}
 #ss5{background-image: url('cD.jpg');}
-
+#slides
+{
+	height: 50%;
+}
 .card.main.ss
 {
+	margin: 0;
+	position: absolute;
 	display: none;
-	height: 50%;
+	display: block;
+	height: 100%;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center 10%;
+	z-index: 1;
 }
+.card.main.ss.pon
+{
+  animation:slideSlideIn .52s 1 !important;
+	z-index: 2;
+}
+
 .card.main.ss.on
 {
-  animation:slideSlideIn .12s 1 !important;
-	display: block !important;
+  animation:slideSlideIn .52s 1 !important;
+	z-index: 3;
 }
 @keyframes slideSlideIn
 {
-	0%{opacity: .8;};
-	100%{opacity: 1;};
+	0%{opacity: 0}
+	100%{opacity: 1}
 }
 .frst::after
 {
@@ -513,6 +527,16 @@ img.card
   top:50%;
 	height:50%;
 
+}
+.card.previous
+{
+	text-align: center;
+	color:var(--1co);
+	font-size: 2.5vh;
+  font-weight: bold;
+	background: none;
+	box-shadow: none;
+	padding: 10px 0 10px 0;
 }
 .event.past
 {

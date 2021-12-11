@@ -41,10 +41,17 @@ function slideShow() {
 	var slides = document.getElementsByClassName("ss");
 	for (i = 0;i < slides.length; i++){
 		slides[i].classList.remove("on");
+		slides[i].classList.remove("pon");
 	}
 	indexSlide++;
 	if (indexSlide > slides.length) {indexSlide = 1}
-  slides[indexSlide-1].classList.add("on");
+	slides[indexSlide-1].classList.add("on");
+	if (indexSlide == 1) {
+		slides[slides.length-1].classList.add("pon");
+	} else {
+		slides[indexSlide-2].classList.add("pon");
+	}
+
 	setTimeout(slideShow, 3500);
 }
 
