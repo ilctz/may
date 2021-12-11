@@ -122,7 +122,7 @@ body
 	background-image: linear-gradient(90deg, var(--bg1) 0%,  var(--bg2) 50%,  var(--bg3) 100%);
 	background-image:url('backgMobile.png');
 	background-position: left;
-	background-size: 100% auto;
+	background-size: auto auto;
 	z-index: -2;
 	/*box-shadow: 200px 200px 200px -200px rgba(128,0,255,.08) inset, -200px -200px 200px -200px rgba(0,255,240,.08) inset;	*/
 
@@ -218,7 +218,7 @@ header::after
 {	
 	position: relative;
 	float:top;
-	margin: 5% 5% 0%;
+	margin: 2.5% 5% 2.5%;
 	width: 90%;
   border-radius: var(--brdrR);
 	background: var(--1c);
@@ -312,6 +312,12 @@ header::after
 	background:var(--1c);
 	color:var(--1co);
 }
+.socials
+{
+	
+	height: auto;
+	width: auto;
+}
 .card.tiktok,.card.instagram,.card.spotify
 {
 	background-blend-mode:difference;
@@ -321,26 +327,27 @@ header::after
 	width: 42.5%;
 	width: 27.77%;
 	box-shadow: var(--boxs2);
+	z-index: 1;
 }
 .card.tiktok
 {
 	background:url('tik.svg') center no-repeat var(--2c) !important;		
 	background-size:50% 50% !important;
-	margin:5% calc(5%/3) 5% 5% !important;
+	margin:2.5% calc(5%/3) 2.5% 5% !important;
 
 }
 .card.instagram
 {
 	background:url('ing.svg') center no-repeat var(--2c) !important;		
 	background-size:50% 50% !important;
-	margin:5% calc(5%/3) 5% calc(5%/3) !important;
+	margin:2.5% calc(5%/3) 2.5% calc(5%/3) !important;
 
 }
 .card.spotify
 {
 	background:url('spo.svg') center no-repeat var(--2c) !important;		
 	background-size:45% 45% !important;
-	margin:5% 5% 5% calc(5%/3) !important;
+	margin:2.5% 5% 2.5% calc(5%/3) !important;
 
 }
 
@@ -458,12 +465,31 @@ img.card
 	height:50%;
 
 }
-
-
-
-
-@media (min-width:500px)
+.event.past
 {
+	filter:none;
+	filter:saturate(20%);
+	filter:grayscale(80%);
+	opacity: 80%;
+}
+.event.past::after
+{
+	position: absolute;
+	height: 2px;
+	width: 104%;
+	top:calc(50% - 1px);
+	left:-2%;
+	content: ;
+	background: #909090;
+}
+
+
+@media (min-width:739px)
+{
+	#bg
+	{
+    background-size: 100%;				
+	}
 }
 @media (min-width:500px) and (max-width:1000px)
 {
@@ -508,6 +534,7 @@ img.card
 	#bg
 	{
 		background-image:url('backg.png');		
+		background-size: 100% 100%; 
 	}
   #drawerIcon,#drawerIconClose,#bgHeader
 	{
@@ -530,9 +557,6 @@ img.card
 	{
 		border-radius: var(--brdrR) !important;
 		
-	}
-	#bg
-	{
 	}
   body
 	{
