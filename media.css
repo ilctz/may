@@ -1,0 +1,16 @@
+@media (min-width: 700px){
+	body
+	{
+		background-size:100vw auto;
+
+	}
+	#title
+	{
+		font-size: 150px;
+	}
+	#picture
+	{
+		background-size:80vh auto;
+		max-width:400px;
+	}
+}
