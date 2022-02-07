@@ -65,27 +65,31 @@ a
 {
 	position: relative;
 	font-size:80px;
-	height: 20vh;
 	width: 80vw;
-	margin:10vw 0 0 10vw;
+	margin-left:10vw;
 	text-align: left;
 	line-height: 60px;
   font-weight: bold;
+  padding: 3vh 0 3vh 0;
 }
 #picture
 {
+	height: 60vw;
 	height: 80vw;
+	width: 60vw;
 	width: 80vw;
+	margin-left:20vw;
 	margin-left:10vw;
 	background-size: 100%;
-	border-radius:20px;
+	border-radius:11px;
 }
 #lnks
 {
 	position: relative;
-	left: 10vw;
+	margin-left: 10vw;
 	width:  80vw;
 	height:  30vh;
+	padding:2.5vh 0 2.5vh 0;
 	
 }
 #links
@@ -101,8 +105,9 @@ a
   font-weight: bold;
 	margin-right: 10px;
 	height: calc(100% / 3);
-	letter-spacing: -4px;
+	letter-spacing: -3px;
 	text-align: right;
+	line-height: 125%;
 	cursor:pointer;
 }
 
@@ -135,15 +140,31 @@ a
 {
   background-image: url(spotify.svg);
 }
-.back
+.pageHead
+{
+	position: fixed;
+	width: 100vw;
+	height: 15vh;
+	z-index: 100;
+}
+.title,.back
 {
 	position: relative;
+	float:left;
+	float:none;
+}
+.back
+{
 	font-size:30px;
-	width: 80vw;
-	margin:10vw 0 0 10vw;
+	width: 30vw;
+	width: 100%;
+	padding:5vh 1vw 5vh 5vw;
+	padding:2.5% 0 2.5% 0;
 	text-align: left;
 	letter-spacing: -1px;
-  font-weight: bold;
+  text-indent: 5%;
+	font-weight: bold;
+	z-index:2;
 	cursor:pointer;
 }
 .back::after
@@ -157,27 +178,48 @@ a
 }
 .title
 {
-	position: relative;
+	padding:5vh 5vw 5vh 1vw;
+	padding:4vh 5vw 3vh 1vw;
+	padding:unset;
 	font-size:80px;
-	width: 80vw;
-	margin:10vw 0 0 10vw;
+	width: 100vw;
 	text-align: center;
-	line-height: 60px;
+	line-height: 5vh;
 	letter-spacing: -4px;
   font-weight: bold;
+	z-index:1;
+}
+.content
+{
+	width: 100%;
+	top:15vh;
+	height: 85vh;
+	position: fixed;
+	overflow: hidden;
+}
+.content-in
+{
+	position: absolute;
+	overflow: scroll;
+	height: 85vh;
+	width: 100vw;
 }
 .card.event
 {
   position: relative;
 	width: 80vw;
 	left:10vw;
-	margin-top:5vh;
+	padding:3vh 0 3vh 0;
 	font-size: 20px;
 	text-align: center;
 }
-.card.event:last-of-type
+.card.event:last-of-type,.card.text:last-of-type
 {
 	margin-bottom:10vh;
+}
+
+.card.event:first-of-type,.card.text:first-of-type
+{
 }
 .event.date
 {

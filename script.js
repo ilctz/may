@@ -18,6 +18,7 @@ setTimeout(function(){
 
 function pickPage(number)
 {
+	window.scrollTo(0, 0);
 	if (number == 99){number = previousPage}
 	currentPage = number;
 	if (number == 0){
@@ -29,5 +30,4 @@ function pickPage(number)
 	// 	card[i].classList.add("on");
 	// }
 	page[number].classList.add("on");
-	window.scrollTo(0, 0);
 }

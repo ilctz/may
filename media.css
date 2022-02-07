@@ -14,3 +14,15 @@
 		max-width:400px;
 	}
 }
+@media (max-width: 400px){
+
+	#title
+	{
+		font-size: 20vw;
+	}
+	#picture
+	{
+		background-size:80vh auto;
+		max-width:400px;
+	}
+}
