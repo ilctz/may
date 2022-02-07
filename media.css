@@ -2,16 +2,98 @@
 	body
 	{
 		background-size:100vw auto;
-
+	}
+	.page
+	{
+		overflow: unset;
+	}
+	  .content,.content-in
+	{
+		overflow: unset;
 	}
 	#title
 	{
-		font-size: 150px;
+		font-size: 80px;
+		text-align: center;
 	}
 	#picture
 	{
 		background-size:80vh auto;
-		max-width:400px;
+		height: 500px;
+		width: 500px;
+		margin-left:calc(50% - 250px);
+	}
+	#lnks
+	{
+		height: 75px;
+		width: 700px;
+		margin-left:calc(50% - 350px);
+	}
+
+#links
+	{
+		width: 70%;
+	}
+	.socials
+	{
+		width: 30%;
+	}
+	.linkPage,.linkIcon
+	{
+		float: left;
+	}
+	.linkPage
+	{
+		width: 25%;
+		height: 100%;
+		font-size: 40px;
+		padding:10px;
+	}
+	.linkIcon
+	{
+		width: 33%;
+		height: 100%;
+	}
+	.card.text
+	{
+		margin-left:calc(50% - 250px);
+		width: 500px;
+		left:unset;
+	}
+	.card.event
+	{
+		float: left;
+		width: 350px;
+		left:unset;
+		height: 120px;
+	}
+ #eventCurrent, #eventPast
+	{
+		position: relative;
+		margin-left:calc(50% - 350px);
+		width: 700px;
+	}
+
+	.title,.back
+	{
+  position: absolute;
+		
+	}
+	.title
+	{
+		width: 100%;
+		
+		line-height: unset;
+		text-align: center;
+	}
+	.title.past
+	{
+		position: absolute;
+		bottom:40%;
+	}
+	.back
+	{
+		width: 30%;
 	}
 }
 @media (max-width: 400px){
@@ -35,5 +117,82 @@
 	{
 		background-size:80vh auto;
 		max-width:400px;
+	}
+}
+/*
+@media (min-width: 700px){
+	body
+	{
+		background-size:100vw auto;
+		height: unset;
+		position:absolute;
+	}
+  .page
+	{
+		display: block !important;
+		position: relative;
+		height:700px;
+		width: 100%;
+		overflow: unset;
+	}
+  .content,.content-in
+	{
+		height: unset;
+		width: unset;
+		overflow: unset;
+	}
+	#title
+	{
+		font-size: 80px;
+		text-align: center;
+	}
+	#picture
+	{
+		background-size:80vh auto;
+		height: 500px;
+		width: 500px;
+		margin-left:calc(50% - 250px);
+	}
+	#lnks
+	{
+		height: 75px;
+		width: 700px;
+		margin-left:calc(50% - 350px);
+	}
+#links
+	{
+		width: 70%;
+	}
+	.socials
+	{
+		width: 30%;
+	}
+	.linkPage,.linkIcon
+	{
+		float: left;
+	}
+	.linkPage
+	{
+		width: 25%;
+		height: 100%;
+		font-size: 40px;
+		padding:10px;
+	}
+	.linkIcon
+	{
+		width: 33%;
+		height: 100%;
+	}
+	.card.text
+	{
+		margin-left:calc(50% - 250px);
+		width: 500px;
+		left:unset;
+	}
+	.card.event
+	{
+		float: left;
+		width: 300px;
+		left:unset;
 	}
 }

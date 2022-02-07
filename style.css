@@ -37,7 +37,7 @@ a
 }
 .on
 {
-  animation:pageSlideIn .12s 1 !important;
+  animation:pageSlideIn .22s 1 !important;
 	display: block !important;
 }
 @keyframes pageSlideIn
@@ -56,6 +56,12 @@ a
 	width: 100vw;
 	overflow:scroll;
 	position: absolute;
+}
+#title,.title,.linkPage,.linkIcon
+{
+	-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 #main,#events,#about,#contact
 {
@@ -87,8 +93,8 @@ a
 	position: relative;
 	margin-left: 10vw;
 	width:  80vw;
-	height:  30vh;
-	padding:2.5vh 0 2.5vh 0;
+	height:  23vh;
+	padding:1.5vh 0 30vh 0;
 	
 }
 #links
@@ -115,7 +121,7 @@ a
 	position:relative;
 	float:left;
 	width:  20vw;
-	height:  30vh;
+	height:  100%;
 }
 .linkIcon
 {
@@ -183,7 +189,7 @@ a
 	font-size:80px;
 	width: 100vw;
 	text-align: center;
-	line-height: 5vh;
+	line-height:50px;
 	letter-spacing: -4px;
   font-weight: bold;
 	z-index:1;
@@ -196,8 +202,8 @@ a
 .content
 {
 	width: 100%;
-	top:15vh;
-	height: 85vh;
+	top:120px;
+	height: 100vh;
 	position: fixed;
 	overflow: hidden;
 }
@@ -205,7 +211,7 @@ a
 {
 	position: absolute;
 	overflow: scroll;
-	height: 85vh;
+	height: 100vh;
 	width: 100vw;
 }
 .card.event
@@ -219,7 +225,7 @@ a
 }
 .card.event:last-of-type,.card.text:last-of-type
 {
-	margin-bottom:10vh;
+	margin-bottom:30vh;
 }
 
 .card.event:first-of-type,.card.text:first-of-type
