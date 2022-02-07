@@ -16,9 +16,20 @@
 }
 @media (max-width: 400px){
 
-	#title
+	#title,.title
 	{
 		font-size: 20vw;
+	}
+	.card.text.mail
+	{
+		font-size: 5vw;
+		
+	}
+  .linkPage
+	{
+		height: calc(100% / 3);
+		font-size: 15vw;
+		line-height: 10vh;
 	}
 	#picture
 	{
