@@ -44,10 +44,10 @@
 	}
 	.linkPage
 	{
-		width: 25%;
+		/*width: 25%;
 		height: 100%;
+		padding:10px;*/
 		font-size: 40px;
-		padding:10px;
 	}
 	.linkIcon
 	{
@@ -109,9 +109,7 @@
 	}
   .linkPage
 	{
-		height: calc(100% / 3);
 		font-size: 15vw;
-		line-height: 10vh;
 	}
 	#picture
 	{
