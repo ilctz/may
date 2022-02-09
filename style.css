@@ -19,6 +19,7 @@ body
 	font-family: 'Poppins';
 	background-repeat: repeat;
   background:url('bg.jpg');
+	background-color:#c386bd;
 	background-size:auto 110vh;
 	background-repeat: no-repeat;
 	color:var(--fntClr);
