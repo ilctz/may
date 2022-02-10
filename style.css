@@ -96,13 +96,15 @@ a
 }
 #picture
 {
-	height: 60vw;
 	height: 80vw;
-	width: 60vw;
+	height: calc(80vw - 20px);
 	width: 80vw;
-	margin-left:20vw;
+	width: calc(80vw - 20px);
 	margin-left:10vw;
+	margin-left:calc(10vw + 10px);
 	border-radius:11px;
+	border-radius:0px;
+	outline:9px solid white;
 }
 #lnks
 {
@@ -280,4 +282,5 @@ a
 #links{background:red;}
 .linkPage:nth-child(2){background-color: #00000050}
 .title{background:red;}
+#title{background:#e385d0;}
 
