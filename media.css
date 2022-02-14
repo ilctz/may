@@ -1,16 +1,25 @@
+
+
 @media (min-width: 700px){
 	body
 	{
 			background-size:100vw 100vh;
+	background-size:120vw auto;
 
 	}
 	.page
 	{
 		overflow: unset;
+		margin-top:80px;
 	}
 	  .content,.content-in
 	{
-		overflow: unset;
+
+	}
+	.content
+	{
+		overflow: scroll !important;
+		top:0;
 	}
 	#title
 	{
@@ -22,22 +31,48 @@
 		background-size:80vh auto;
 		height: 500px;
 		width: 500px;
-		margin-left:calc(50% - 250px);
+		margin-left:calc(50% - 250px); 
 	}
 	#lnks
 	{
-		height: 75px;
-		width: 700px;
-		margin-left:calc(50% - 350px);
+    display: none;
 	}
 
-#links
+	#lnks-desktop
 	{
-		width: 70%;
+		background: #FFFFFF15;
+		display: block;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: 80px;
+		z-index: 110;
+		outline: 1px solid #FFFFFF50;
+	}
+	#dot
+	{
+		position: absolute;
+		left:12.5%;
+		left:38%;
+		left:62.5%;
+		left:87.5%;
+		margin-left:-5px;
+		height: 5px;
+		top:60px;
+		width: 10px;
+		border-radius: 10px;
+		background-color: #FFFFFF;
+		transition: left .08s ease-in-out;
+	}
+	.links
+	{
+		width: 80%;
+		height: 100%;
 	}
 	.socials
 	{
-		width: 30%;
+		height: 80px;
+		width: 20%;
 	}
 	.linkPage,.linkIcon
 	{
@@ -45,39 +80,71 @@
 	}
 	.linkPage
 	{
-		/*width: 25%;
-		height: 100%;
-		padding:10px;*/
-		font-size: 40px;
+		position: relative;	
+		font-size: 60px;
+    margin: unset;
+		width: 25%;
+		padding: 38px 0 38px 0;
+		letter-spacing: -5px;
+		text-align: center;
+		cursor: pointer;
+    font-size: 35px;
+		letter-spacing: -2px;
 	}
 	.linkIcon
 	{
+		float:left;
 		width: 33%;
 		height: 100%;
 	}
+
+	
 	.card.text
 	{
 		margin-left:calc(50% - 250px);
 		width: 500px;
 		left:unset;
+		width: 80%;
+		margin-left:10%;
+		font-size: 30px;
 	}
 	.card.event
 	{
 		float: left;
-		width: 350px;
+		width: calc(100% / 3);
+		font-size: 30px;
 		left:unset;
-		height: 120px;
+
 	}
- #eventCurrent, #eventPast
+	.card.event:last-of-type,.card.text:last-of-type
+	{
+		margin-bottom:unset;
+	}
+	.card.event:nth-child(odd)
+	{
+		
+	}
+   #eventCurrent, #eventPast
 	{
 		position: relative;
-		margin-left:calc(50% - 350px);
-		width: 700px;
+		margin-left:unset;
+		width: 100%;
 	}
-
-	.title,.back
+  .title.events
 	{
-  position: absolute;
+		font-size: 40px;
+		line-height: 75px;
+				background: #FFFFFF0D;
+		position: relative;
+		width: 100vw;
+		height: 80px;
+		outline: 1px solid #FFFFFF50;
+		float:left;
+	}
+	.title:not(.events),.back
+	{
+		position: absolute;
+		display: none;
 		
 	}
 	.title
@@ -89,14 +156,29 @@
 	}
 	.title.past
 	{
-		position: absolute;
-		bottom:40%;
+		position: relative;
 	}
 	.back
 	{
 		width: 30%;
 	}
 }
+
+
+@media (min-width: 700px) and (max-width: 1000px){
+
+	.linkIcon
+	{
+		background-size: auto 30px;
+	}
+	.card.event
+	{
+    width: 50%;
+	}
+}
+
+
+
 @media (max-width: 400px){
 
 	#title,.title

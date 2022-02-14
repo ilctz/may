@@ -115,7 +115,11 @@ a
 	padding:1.5vh 0 30vh 0;
 	
 }
-#links
+#lnks-desktop
+{
+	display: none;
+}
+.links
 {
 	position: relative;
 	float:left;
@@ -225,8 +229,8 @@ a
 	width: 100%;
 	top:120px;
 	height: 100vh;
-	position: fixed;
-	overflow: hidden;
+	position: absolute;
+	overflow: scroll;
 }
 .content-in
 {

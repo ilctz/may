@@ -16,6 +16,28 @@
 
 	<body>
 		<div id="bg"></div>
+
+		<div id="lnks-desktop">
+			<div class="links">
+				<div id=dot></div>
+				<div class="linkPage" onclick="pickPage(0)">home</div>
+				<div class="linkPage" onclick="pickPage(1)">about</div>
+				<div class="linkPage" onclick="pickPage(2)">events</div>
+				<!-- <div class="linkPage">gallery</div> -->
+				<div class="linkPage" onclick="pickPage(3)">contact</div>
+			</div>
+
+			<div class="socials">
+				<a href="https://www.instagram.com/martha_may_music/">
+					<div class="instagram linkIcon"></div>
+				</a>
+					<a href="https://www.tiktok.com/@martha_may_music">
+					<div class="tiktok linkIcon"></div>
+				</a>
+				<div class="spotify linkIcon"></div>
+			</div>
+		</div>
+
 		<div id="main" class="page on">
 			<div id="title">martha may</div>
 			<img id="picture" src="picture.jpg">
@@ -29,13 +51,15 @@
 					</a>
 					<div class="spotify linkIcon"></div>
 				</div>
-				<div id="links">
+				<div class="links">
 					<div class="linkPage" onclick="pickPage(1)">about</div>
 					<div class="linkPage" onclick="pickPage(2)">events</div>
 					<!-- <div class="linkPage">gallery</div> -->
 					<div class="linkPage" onclick="pickPage(3)">contact</div>
 				</div>
 			</div>
+
+
 		</div>
 
 		<div id="about" class="page">
@@ -73,6 +97,7 @@
 			</div>
 			<div class="content">
 			<div class="content-in">
+				<div class="title events">upcoming events</div>
 				<div id="eventCurrent">
 
 
@@ -87,6 +112,7 @@
 							<div class="event adress2">London NW3 4RL</div>
 						</div>
 					</div> -->
+
 
 					<div class="card event">
 						<div class="event date">
@@ -123,10 +149,14 @@
 							<div class="event adress2">London SW15 1EU</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="title past">past events</div>
+
+
+			</div>
+			<div class="title events">past events</div>
+
 				<div id="eventPast">
+
 					<div class="card event">
 						<div class="event date">
 							<div class="event daymonthyear">January 21 2022</div>
@@ -138,6 +168,18 @@
 						</div>
 					</div>
 
+
+				<div class="card event">
+					<div class="event date">
+						<div class="event daymonthyear">November 25 2021</div>
+						<div class="event time"></div>
+					<div class="event place">
+						<div class="event name">Hope and Anchor</div>
+						<div class="event adress">Islington, London</div>
+					</div>
+				</div>
+				</div>
+
 				<div class="card event">
 					<div class="event date">
 						<div class="event daymonthyear">December 8 2021</div>
@@ -148,6 +190,8 @@
 					</div>
 				</div>
 				</div>
+
+
 				</div>
 			</div>
 			</div>

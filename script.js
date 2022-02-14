@@ -26,6 +26,7 @@ function pickPage(number)
 	for (i = 0;i < page.length; i++) {
 		page[i].classList.remove("on");
 	}
+	document.getElementById('dot').style.left= number * 25 + 12.5 + "%";
 	// for (i = 0; i < card.length; i++) {
 	// 	card[i].classList.add("on");
 	// }
