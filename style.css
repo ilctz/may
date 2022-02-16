@@ -5,8 +5,30 @@
 }
 html{
 	scroll-behavior: smooth;
+	-webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
 }
-
+.select
+{
+	-webkit-user-select: text ;
+  -ms-user-select: text ;
+  user-select: text ;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+}
+.select.mail
+{
+	-webkit-user-select: all ;
+  -ms-user-select: all ;
+  user-select: all ;
+	-khtml-user-select: all;
+	-moz-user-select: all;
+}
 body
 {
 
@@ -33,7 +55,7 @@ body
 	left:0;
 	height: 100vh;
 	width: 100%;
-	opacity: 30%;
+	opacity: 45%;
 	background-image: linear-gradient(
   35deg,
   hsl(272deg 67% 63%) 0%,
@@ -72,12 +94,6 @@ a
 	width: 100vw;
 	overflow:scroll;
 	position: absolute;
-}
-#title,.title,.linkPage,.linkIcon
-{
-	-webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 #main,#events,#about,#contact
 {
@@ -219,7 +235,7 @@ a
   font-weight: bold;
 	z-index:1;
 }
-.title.past
+.title.events
 {
 	font-size: 50px;
 	line-height: 60px;

@@ -26,6 +26,10 @@
 		font-size: 80px;
 		text-align: center;
 	}
+	.pageHead
+	{
+		display: none;
+	}
 	#picture
 	{
 		background-size:80vh auto;
@@ -53,16 +57,29 @@
 	{
 		position: absolute;
 		left:12.5%;
-		left:38%;
-		left:62.5%;
-		left:87.5%;
 		margin-left:-5px;
-		height: 5px;
+		height: 2px;
 		top:60px;
 		width: 10px;
 		border-radius: 10px;
 		background-color: #FFFFFF;
 		transition: left .08s ease-in-out;
+	/*
+		height: 1px;
+		bottom:-1px;
+		top:unset;
+		width: 25%;
+		margin-left:-12.5%;
+		background-color: #FFFFFF90;
+	*/
+	/*
+		height: 60px;
+		top:calc(50% - 30px);
+		width: 150px;
+		margin-left:calc(12.5% - 10px);
+		margin-left:-75px;
+		background-color: #FFFFFF30;
+			*/
 	}
 	.links
 	{
@@ -77,6 +94,12 @@
 	.linkPage,.linkIcon
 	{
 		float: left;
+		transition:all .08s;
+	}
+	.linkPage:hover,.linkIcon:hover
+	{
+		border-radius: 3px;
+		background-color:#FFFFFF20;
 	}
 	.linkPage
 	{
@@ -84,7 +107,7 @@
 		font-size: 60px;
     margin: unset;
 		width: 25%;
-		padding: 38px 0 38px 0;
+		padding: 40px 0 40px 0;
 		letter-spacing: -5px;
 		text-align: center;
 		cursor: pointer;
