@@ -9,8 +9,9 @@
 	}
 	.page
 	{
-		overflow: unset;
+		overflow: scroll;
 		margin-top:80px;
+		height: calc(100vh - 80px);
 	}
 	  .content,.content-in
 	{
@@ -19,6 +20,7 @@
 	.content
 	{
 		overflow: scroll !important;
+		padding-bottom:10vh;
 		top:0;
 	}
 	#title
