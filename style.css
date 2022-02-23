@@ -2,6 +2,8 @@
 	--:#;
 	--bgClr:#CA73DF;
 	--fntClr:#FFF;
+	--bg2Clr:#F0AFE0;
+	--fnt2Clr:#FFF;
 }
 html{
 	scroll-behavior: smooth;
@@ -63,6 +65,19 @@ body
   hsl(317deg 63% 71%) 61%,
   hsl(334deg 55% 64%) 100%
   );
+	z-index: -2;
+}
+#bgPic
+{
+	background:url('bg_unb.jpg');
+	position: fixed;
+	top:0;
+	left:0;
+	height:100vh;
+	width:100vw;
+	background-size: fill;
+	background-position:  center 30%;
+	z-index: -1;
 }
 a
 {
@@ -109,6 +124,7 @@ a
 	line-height: 60px;
   font-weight: bold;
   padding: 3vh 0 3vh 0;
+	text-shadow: 0px 0px 10px #00000020;
 }
 #picture
 {
@@ -186,6 +202,21 @@ a
 .spotify
 {
   background-image: url(spotify.svg);
+}
+.spotify:active
+{
+	animation: notAv .2s infinite;
+}
+@keyframes notA
+{
+	0%{margin-left: 0px;}
+	20%{margin-left: 10px;}
+	60%{margin-left: -10px;}
+	80%{margin-left: 0px;}
+}
+@keyframes notAv
+{
+	80%{transform:perspective;}
 }
 .pageHead
 {
@@ -295,6 +326,24 @@ a
 {
 		text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
 		text-shadow: none;
+}
+.mail 
+  {
+  font-size: 40px;
+  padding: 40px 0 40px 0;
+  position: relative;
+  width: 100vw;
+}
+.mail.copied
+{
+	animation: copied 2s 1;
+	
+}
+@keyframes copied{
+	0%{text-indent: -10px;color:transparent;}
+	20%{text-indent: 0px;color:var(--fntClr);}
+	80%{text-indent: 0px;color:var(--fntClr);}
+	100%{text-indent: 10px;color:transparent;}
 }
 /*
 .socials{background:green;}

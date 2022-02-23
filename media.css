@@ -1,6 +1,12 @@
 
 
 @media (min-width: 700px){
+	#bgPic
+	{
+		position: absolute;
+	background-size: 100%;
+	background-size:cover;
+	}
 	body
 	{
 			background-size:100vw 100vh;
@@ -9,9 +15,14 @@
 	}
 	.page
 	{
-		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: auto;
 		margin-top:80px;
 		height: calc(100vh - 80px);
+	}
+	#main
+	{
+		height: 100vh;
 	}
 	  .content,.content-in
 	{
@@ -38,11 +49,15 @@
 		height: 500px;
 		width: 500px;
 		margin-left:calc(50% - 250px); 
+		border-radius: 10px;
 	}
 	#lnks
 	{
     display: none;
 	}
+
+	
+	
 
 	#lnks-desktop
 	{
@@ -66,6 +81,7 @@
 		border-radius: 10px;
 		background-color: #FFFFFF;
 		transition: left .08s ease-in-out;
+	}
 	/*
 		height: 1px;
 		bottom:-1px;
@@ -82,7 +98,7 @@
 		margin-left:-75px;
 		background-color: #FFFFFF30;
 			*/
-	}
+	
 	.links
 	{
 		width: 80%;
@@ -100,8 +116,8 @@
 	}
 	.linkPage:hover,.linkIcon:hover
 	{
-		border-radius: 3px;
-		background-color:#FFFFFF20;
+		color:white;
+		background-color:#323;
 	}
 	.linkPage
 	{
@@ -122,9 +138,7 @@
 		width: 33%;
 		height: 100%;
 	}
-
-	
-	.card.text
+		.card.text
 	{
 		margin-left:calc(50% - 250px);
 		width: 500px;
@@ -187,6 +201,128 @@
 	{
 		width: 30%;
 	}
+	
+	.mail 
+  {
+		background: #FFFFFF0D;
+		outline: 1px solid #FFFFFF50;
+		border-radius: 2px;
+		box-shadow: 0px 10px 10px #00000005;
+		cursor: pointer;
+    border-radius: 9px;
+	}
+	.mail:hover
+	{
+		background: #FFFFFF1D;		
+	}
+
+	
+	/*
+		.page
+	{
+		margin-top:100px;
+		height: calc(100vh - 100px);
+	}
+	#lnks-desktop
+	
+	{
+		width:calc(100% - 40px);
+		margin:20px;
+		overflow: hidden;
+	}
+	#dot
+	{
+		top:0;
+		margin-left:-12.5%;
+		width: 25%;
+		height: 100%;
+		border-radius: 0;
+		background:#FFFFFF40;
+	}
+	.title
+	{
+		width:calc(100% - 40px) !important;
+		margin:20px;
+		border-radius:10px;
+	}
+	#lnks-desktop,.title,.mail
+	{
+		border-top:2px solid #FFFFFF30;
+		border-top:unset;
+		background:#F2F4B3 !important;
+		color:#EEF;
+		color:#443;
+		border-radius: 10px;
+	}
+	.instagram,.tiktok,.spotify
+	{
+		filter:invert(75%);
+	}
+	#bg
+	{
+			filter:hue-rotate(170deg);
+			filter:hue-rotate(130deg) brightness(130%) saturate(140%);
+	}
+	#picture
+	{
+    display: none;
+		border-radius: 10px;
+	}
+	#bgPic
+	{
+		background:url('bgpic.jpg');
+	}
+	#bgPic-blur
+	{
+		background:url('bgpic_blur.jpg');
+	}
+	#bgPic,#bgPic-blur
+	{
+		position: fixed;
+		top:0;
+		left:0;
+		height:100vh;
+		width:100vw;
+		background-size: 100%;
+    background-position:  center 30%;
+		z-index: 0;
+	}
+	#lnks-desktop
+	{
+	background:#FFFFFF50 !important;
+background-image: linear-gradient(
+  90deg,
+  hsl(62deg 75% 83%) 0%,
+  hsl(103deg 63% 77%) 50%,
+  hsl(144deg 52% 70%) 100%
+)
+			!important;
+	}*/
+	/*
+	.linkPage
+	{
+		width: calc(25% - 20px);
+		margin-left:10px;
+		border-radius: 100px !important;
+		background:var(--bgClr);
+		background:#D18ECB;
+		color:#432443;
+		box-shadow: 0px 0px 4px #00000020,0px 10px 10px #00000020;
+	}
+	.linkPage:hover
+	{
+		transform: scale(1.05,1.05);
+		background:#D18EDB;
+	}
+	#lnks-desktop {
+		background:unset;
+		outline:unset;
+		margin:20px 0 20px 0;
+	}
+	*/
+	
+
+	
 }
 
 
@@ -203,6 +339,17 @@
 }
 
 
+
+@media (max-width: 700px){
+  .page:not(#main)
+	{
+		margin-top:120px;
+	}
+.pageHead
+	{
+		top:0;
+	}
+}
 
 @media (max-width: 400px){
 

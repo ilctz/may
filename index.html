@@ -16,6 +16,7 @@
 
 	<body>
 		<div id="bg"></div>
+		<div id="bgPic-blur"></div>
 
 		<div id="lnks-desktop">
 			<div class="links">
@@ -39,6 +40,7 @@
 		</div>
 
 		<div id="main" class="page on">
+			<div id="bgPic"></div>
 			<div id="title">martha may</div>
 			<img id="picture" src="picture.jpg">
 			<div id="lnks">
@@ -67,8 +69,8 @@
 				<div class="back" onclick="pickPage(0)">go back</div>
 				<div class="title">about</div>
 			</div>
-			<div class="content">
-			<div class="content-in">
+			<!-- <div class="content"> -->
+			<!-- <div class="content-in"> -->
 				<div class="card text select">
 					Hailing from the coastal city of Split, Croatia, Martha May is a
 					heartfelt songwriter and born performer. Infusing deeply personal
@@ -86,8 +88,8 @@
 						 performances lined up and a debut single due for early 2022 release,
 						 an artist like no other is poised to make her mark on the world.
 					</div>
-				</div>
-				</div>
+				<!-- </div> -->
+				<!-- </div> -->
 			</div>
 
 		<div id="events" class="page">
@@ -95,8 +97,6 @@
 				<div class="back" onclick="pickPage(0)">go back</div>
 				<div class="title">events</div>
 			</div>
-			<div class="content">
-			<div class="content-in">
 				<div class="title events">upcoming events</div>
 				<div id="eventCurrent">
 
@@ -193,8 +193,6 @@
 
 
 				</div>
-			</div>
-			</div>
 		</div>
 
 		<div id="contact" class="page">
@@ -202,12 +200,9 @@
 				<div class="back" onclick="pickPage(0)">go back</div>
 				<div class="title">contact</div>
 			</div>
-			<div class="content">
-			<div class="content-in">
 
-				<div class="card text mail select">musicbymarthamay@gmail.com</div>
-			</div>
-			</div>
+				<!-- <div class="card text mail select">musicbymarthamay@gmail.com</div> -->
+				<div class="card text mail cope" onclick="cope(this)">musicbymarthamay@gmail.com</div>
 		</div>
 	</body>
 	<script src="script.js" type="text/javascript"></script>

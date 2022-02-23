@@ -32,3 +32,14 @@ function pickPage(number)
 	// }
 	page[number].classList.add("on");
 }
+function cope(block){
+		if(block.innerHTML == "Copied!"){return}
+		var old = block.innerHTML;
+    navigator.clipboard.writeText(block.innerHTML);
+    setTimeout(function(){
+			block.classList.remove("copied")
+			block.innerHTML = old;
+		},2000);
+		block.innerHTML = "Copied!";
+    block.classList.add("copied");
+}
