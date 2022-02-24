@@ -231,6 +231,7 @@ a
 	
 	background: #FFFFFF15;
 	outline: 1px solid #FFFFFF50;
+	backdrop-filter:blur(20px);
 }
 
 .back
