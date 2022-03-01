@@ -27,17 +27,11 @@ body
 	height: 100%;
 	height: 100vh !important;
 	width: 100%;
-	font-family: 'Arial';
 	background-color:var(--cColor);	
 	background-blend-mode:;
 	background-image:url('bg.png');
 	background-repeat: repeat;
 	*/
-}
-@font-face
-{
-  font-family: 'Comfortaa';
-	src: url(Comfortaa-Regular.ttf);
 }
 /*
 .tst
@@ -203,6 +197,8 @@ button.artName
 	padding:5%;
 	width: 100%;
 	border: none;
+	font-family: 'Open Sans', sans-serif !important;
+	font-weight: 400;
 	font-size: 2vh;
 	text-align: center;
 	background: var(--aColor);
@@ -230,7 +226,14 @@ button.artName
 	background: var(--dColor);
 	z-index: 52;
 }
-
+.sp.s1
+{
+	top:calc(100% / 3);
+}
+.sp.s2
+{
+	top:calc(200% / 3);
+}
 .artBtns.a1
 {
 	height:20%;
@@ -238,6 +241,10 @@ button.artName
 .artBtns.a2
 {
 	height:40%;
+}
+.artBtns.a3
+{
+	height:60%;
 }
 
 .artTik
@@ -250,12 +257,22 @@ button.artName
 	background:var(--aColor) url('../instagram.svg') center no-repeat;		
 	background-size:60%;
 }
+.artWeb
+{
+	background:var(--aColor) url('../instagram.svg') center no-repeat;		
+	background-size:60%;
+}
 .artTwi
 {
 	background:var(--aColor) url('../twitter.svg') center no-repeat;		
 	background-size:60%;
 }
-.artTik,.artIng,.artTwi
+.artWeb
+{
+	background:var(--aColor) url('../fav.svg') center no-repeat;		
+	background-size:60%;
+}
+.artTik,.artIng,.artTwi,.artWeb
 {
 	background-blend-mode:difference;
 	
@@ -263,6 +280,10 @@ button.artName
 	/*
 	box-shadow: 0px 0px 0px 1px var(--dColor);
 	*/
+}
+.artWeb.b3,.artTik.b3,.artIng.b3
+{
+  height: calc(100% / 3);
 }
 .artTwi.b2,.artTik.b2,.artIng.b2
 {

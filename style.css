@@ -4,6 +4,8 @@
 	--fntClr:#FFF;
 	--bg2Clr:#F0AFE0;
 	--fnt2Clr:#FFF;
+	--txtShadowClr:#835685;
+	
 }
 html{
 	scroll-behavior: smooth;
@@ -47,6 +49,17 @@ body
 	background-size:auto 110vh;
 	background-repeat: no-repeat;
 	color:var(--fntClr);
+  /*
+	text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
+  text-shadow: 0px 2px 0px #00000050;
+  text-shadow:
+		-1px 1px 0px var(--txtShadowClr),
+		1px 1px 0px var(--txtShadowClr),
+		-1px -1px 0px var(--txtShadowClr),
+		1px -1px 0px var(--txtShadowClr)
+		;
+	*/
+  text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
 }
 #bg
 {
@@ -259,7 +272,7 @@ a
 	font-size:80px;
 	width: 100vw;
 	line-height:50px;
-	letter-spacing: -4px;
+	letter-spacing: -0px;
   font-weight: bold;
 	z-index:1;
 	text-align: center;
@@ -335,8 +348,8 @@ a
 }
 .card.text,.card.event
 {
-		text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
-		text-shadow: none;
+		/*! text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030; */
+		/*! text-shadow: none; */
 }
 .mail 
   {
@@ -344,7 +357,13 @@ a
   padding: 40px 0 40px 0;
   position: relative;
   width: 100vw;
-		text-align: center !important;
+	background: #FFFFFF0D;
+	outline: 1px solid #FFFFFF50;
+	border-radius: 2px;
+	box-shadow: 0px 10px 10px #00000005;
+	cursor: pointer;
+	text-align: center !important;
+	border-radius: 9px;
 }
 .mail.copied
 {
@@ -356,6 +375,45 @@ a
 	20%{text-indent: 0px;color:var(--fntClr);}
 	80%{text-indent: 0px;color:var(--fntClr);}
 	100%{text-indent: 10px;color:transparent;}
+}
+.credit
+{
+	position: absolute;
+	bottom: 20px;
+	left: calc(50vw - 75px);
+	background:url('mb4w.svg') left no-repeat;
+	background-size:201px;
+	width: 151px;
+	height: 50px;
+	transition: all .12s ease-in-out;
+	overflow: hidden;
+}
+.credit:hover
+{
+	width: 201px;
+	transform: scale(105%);
+	background-color:black;
+}
+/*
+*/
+/*
+.bigCard
+{
+	margin:5%;
+	padding:30px;
+	width: calc(90% - 60px);
+	background: #FFFFFF15;
+	background: #B67CBA90;
+	outline: 1px solid #FFFFFF50;
+	border-radius: 10px;
+	position: relative;
+}
+.card.text
+{
+  left:0;
+	margin: unset;
+	margin-bottom:20px;
+	width: 100%;
 }
 /*
 .socials{background:green;}
