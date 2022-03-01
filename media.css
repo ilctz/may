@@ -402,6 +402,10 @@ background-image: linear-gradient(
 		background-size:80vh auto;
 		max-width:400px;
 	}
+	.credit
+	{
+		bottom:80px;
+	}
 }
 /*
 @media (min-width: 700px){
