@@ -147,16 +147,17 @@ a
 	height: calc(80vw - 20px);
 	width: 80vw;
 	width: calc(80vw - 20px);
-	margin-left:10vw;
+	margin-top:40px;
 	margin-left:calc(10vw + 10px);
 	background:url('ressources/cover.png');
 	background-size: 100% 100%;
+	position: relative;
 }
-#listenButton,#picture,#lnks
+#listenButton,#picture,#lnks,.pageHead,.mail,.title.events,#eventCurrent,#eventPast
 {
 	border-radius:7px !important;	
-	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25);
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.21)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2));	
+	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25) !important;;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.21)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2)) !important;;	
 }
 .sp
 {
@@ -169,6 +170,7 @@ a
 #lnks
 {
 	position: absolute;
+	position: relative;
 	margin-left: calc(10vw + 10px);
 	width:  calc(80vw - 20px);
 	height:  fit-content;
@@ -219,7 +221,6 @@ a
 .links
 {
 	position: relative;
-	float:left;
 	width:100%;
 	height:fit-content;
 }
@@ -249,7 +250,6 @@ a
 
 .socials
 {
-	float:right;
 	position:relative;
 	width:  100%;
   height: 68px;
@@ -295,26 +295,26 @@ a
 {
 	position: fixed;
 	width: 100vw;
-	height: 15vh;
+	height: 80px;
 	z-index: 100;
   bottom:0;
 	top:unset !important;;
 	background:var(--bg2Clr);
 	
-	
-	background: #FFFFFF15;
-	outline: 1px solid #FFFFFF50;
-	backdrop-filter:blur(20px);
+	border-radius:  0 !important;;
+	color:#390803;
+	background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
 }
 
 .back
 {
-	font-size:30px;
+	font-size:20pt;
 	width: 35vw;
 	letter-spacing: -1px;
 	font-weight: bold;
 	z-index:2;
 	cursor:pointer;
+	border-right: 1px solid #FFFFFF20;
 }
 .back::after
 {
@@ -331,8 +331,7 @@ a
 	padding:unset;
 	font-size:80px;
 	width: 100vw;
-	line-height:50px;
-	letter-spacing: -0px;
+	letter-spacing: 1px;
   font-weight: bold;
 	z-index:1;
 	text-align: center;
@@ -340,20 +339,37 @@ a
 .title.menu
 {
 	padding:unset;
-	width: 65vw;
-	font-size: 60px;
+	width: calc(65vw - 1px);
+	font-size:20pt;
 }
 .title.menu,.back
 {
 	position: relative;
 	line-height: 15vh;
 	text-align: center;
+	line-height:80px;
 	float:left;
 }
 .title.events
 {
-	font-size: 50px;
-	line-height: 60px;
+	position: relative;
+	margin-top:20px;
+	margin-left:10%;
+	width: 80%;
+	font-size: 20pt;
+	outline:1px solid #FFFFFF40;
+	padding:20px 0 20px 0;
+	z-index: 6;
+	border-radius: 7px 7px 0 0 !important;
+	color:#390803;
+  
+	background: linear-gradient(266.31deg, #BF6E97AA 0%, #DD94B7AA 100%), #C992D6;
+	background: #DD7FCA;
+	background: linear-gradient(266.31deg, #CE7CD540 0%, #DC83BC40 100%), #DD7FCA;
+  
+  background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
+	box-shadow: unset !important;
+	filter:unset !important;
 }
 .content
 {
@@ -370,23 +386,34 @@ a
 	height: 100vh;
 	width: 100vw;
 }
+#eventCurrent,#eventPast
+{
+	background:#D687E1;
+	background: linear-gradient(266.31deg, #CE7CD540 0%, #DC83BC20 100%), #D687E1;
+	background:#39080340;
+	margin-top:-7px;
+	margin-left:10%;
+	width: 80%;
+	border-radius: 0 0 7px 7px !important;
+	z-index: 5;
+	outline:1px solid #FFFFFF20;
+}
 .card.event
 {
   position: relative;
-	width: 80vw;
-	left:10vw;
+	width: 100%;
+	left:0;
+	margin-top:1px;
 	padding:3vh 0 3vh 0;
 	font-size: 20px;
 	text-align: center;
+  border-top: 1px solid #FFFFFF50;
 }
-.card.event:last-of-type,.card.text:last-of-type
+.sp
 {
 	margin-bottom:15vh;
 }
 
-.card.event:first-of-type,.card.text:first-of-type
-{
-}
 .event.date
 {
 	width: 100%;	
@@ -396,15 +423,28 @@ a
 	font-weight: bold;
 }
 
-
+.bigCard
+{
+	margin-top:30px;
+	width: calc(100% - 60px);
+	margin-left:30px;
+	background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
+	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25) !important;
+	filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.21)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2)) !important;
+	border-radius: 7px;
+	outline:1px solid #FFFFFF20;
+}
 .card.text
 {
   position: relative;
 	width: 80vw;
-	left:10vw;
-	margin-top:5vh;
 	font-size: 20px;
 	text-align: left;
+	
+	width: calc(100% - 40px);
+	color: #390803;
+  padding:20px;
+	border-bottom: 1px solid #00000010;
 }
 .card.text,.card.event
 {
@@ -492,12 +532,18 @@ a
   position: relative;
   width: 100vw;
 	background: #FFFFFF0D;
-	outline: 1px solid #FFFFFF50;
+	outline: 1px solid #00000020;
 	border-radius: 2px;
 	box-shadow: 0px 10px 10px #00000005;
 	cursor: pointer;
 	text-align: center !important;
 	border-radius: 9px;
+	color: #390803;
+	margin-top:20px;
+	margin-left:30px;
+	width: calc(100% - 100px) !important;
+	font-weight: bold;
+  background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
 }
 .mail.copied
 {
@@ -512,13 +558,13 @@ a
 }
 .credit
 {
-	position: absolute;
-	bottom: 20px;
+	position: relative;
 	left: calc(50vw - 75px);
 	background:url('mb4w.svg') left no-repeat;
 	background-size:201px;
 	width: 151px;
 	height: 50px;
+	margin-top:100px;
 	transition: all .12s ease-in-out;
 	overflow: hidden;
 }
