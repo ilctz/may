@@ -2,11 +2,17 @@
 @media (max-width: 870px) and (min-width: 700px){
   .linkPage
 	{
-		font-size: 14pt !important;
+		
+		font-size: 56px !important;
+	}
+	.socials
+	{
+		padding-left:25px !important;
 	}
 	.linkIcon
 	{
-		background-size: 14pt !important;
+		background-size: 50px !important;
+		width: 30% !important;
 	}
 }
 @media (min-width: 700px){
@@ -26,12 +32,15 @@
 	{
 		overflow-x: hidden;
 		overflow-y: auto;
-		margin-top:80px;
-		height: calc(100vh - 80px);
+		/*! margin-top:80px; */
+		height: 100vh;
+		width: 50vw;
+		left:50vw;
 	}
 	#main
 	{
 		height: 100vh;
+
 	}
 	  .content,.content-in
 	{
@@ -54,11 +63,15 @@
 	}
 	#picture
 	{
-		background-size:100% 100%;
-		height: 500px;
-		width: 500px;
-		margin-left:calc(50% - 250px); 
-		border-radius: 1px;
+		background-position: center;
+		background-size:cover;
+		height: 100%;
+		width: 100%;
+		margin:0; 
+		background:url('ressources/pic2.jpg');
+		background-position: center;
+    background-size: cover; 
+	 
 	}
 	#lnks
 	{
@@ -74,15 +87,17 @@
 		display: block;
 		position: fixed;
 		top: 0;
-		width: 100vw;
-		height: 80px;
+		width: 50vw;
+		height: 100vh;
 		z-index: 110;
-		outline: 1px solid #FFFFFF50;
-    background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, .07) 50%, rgba(255, 207, 250, 0.31) 100%), #EBB21F;
-		color:390803;
+		outline: 1px solid var(--brdrClr);
+		color:var(--fnt2Clr);
+    /*! background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, .07) 50%, rgba(255, 207, 250, 0.31) 100%), #EBB21F; */
+		background:var(--bgClr);
 	}
 	#dot
 	{
+		display: none;
 		position: absolute;
 		left:10%;
 		margin-bottom: -2px;
@@ -94,13 +109,18 @@
 	}
 	#listenButton
 	{
-		height: 80px;
-		left: calc(50% - 250px);
-		margin-top:20px;
-		background:linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
-		position: relative;
-		width:500px;
-		margin-bottom:100px;
+		position: absolute;
+    bottom:0;
+		height: 125px;
+		left:0;
+		margin-top:0;
+		width:100%;
+		margin-bottom:0;
+	}
+	#lbPic
+	{
+		height: 100px;
+		width: 100px;
 	}
 	/*
 		height: 1px;
@@ -121,16 +141,12 @@
 	
 	.links
 	{
-		width: 80%;
-		height: 100%;
-		float:left;
+		height: calc(100% - 125px);
+		padding:0px;
+		width: calc(100% - 0px);
+		float:unset;
 	}
-	.socials
-	{
-		height: 80px;
-		float:left;
-		width: 20%;
-	}
+
 	.linkPage,.linkIcon
 	{
 		float: left;
@@ -139,56 +155,72 @@
 	.linkPage:hover,.linkIcon:hover
 	{
 		color:white;
-		background-color:390803;
 	}
-	.linkPage
+  .linkPage
 	{
 		position: relative;	
 		font-size: 60px;
     margin: unset;
-		width: auto;
-		padding: 40px 20px 40px 20px;
-		letter-spacing: -5px;
-		text-align: center;
+		width: 100%;
+		/*! padding: 40px 20px 40px 20px; */
+		/*! letter-spacing: -5px; */
+		/*! text-align: center; */
 		cursor: pointer;
-    font-size: 20pt;
-		letter-spacing: -1px;
+    /*! font-size: 20pt; */
+		/*! letter-spacing: -1px; */
 		
 		padding:0 20px 0 20px;
+		padding:20px 20px 20px 20px;
+		padding: 0;
+		height: calc(100% / 6);
+		text-indent: 50px;
 		text-transform: capitalize;
-		line-height: 75px;
-		height: 100%;
-		font-size: 20pt;
+		font-size: 60pt;
 		letter-spacing: 1px;
-		text-align: center;
-		border-bottom: 1px solid #FFFFFF20;
+		text-align: left;
+		/*! border-bottom: 1px solid #FFFFFF20; */
 		
 
+	}
+	.socials
+	{
+		position: relative;
+		height: calc(100% / 6);
+		float:left;
+		width: calc(100% - 50px);
+		padding-left:25px;
+		margin:unset;
 	}
 	.linkIcon
 	{
 		float:left;
-		width: calc(100% / 3);
+		width: 120px;
 		height: 100%;
+		background-size: 60px;
+		padding: 20px 0px 20px 0px;
 	}
 	.card.text
 	{
-		margin-left:calc(50% - 250px);
-		width: 500px;
+		/*! margin-left:calc(50% - 250px); */
 		left:unset;
-		width: calc(100% - 80px);
-		margin-left:20px;
+		width: calc(100% - 0px);
 		font-size: 20pt;
-		text-align: left;
+		padding: 0 0 var(--crdPddng) 0;
+		/*! text-align: left; */
 	}
-
+	
+  .bigCard
+  {
+		padding: var(--crdPddng);
+		width: calc(100% - var(--crdPdding));
+	}
 	.card.event
 	{
 		display: inline-block;
 		float: left;
-		width: calc((100% / 3) - 0px);
+		width: 100%;
 
-		font-size: 25px;
+		font-size: 25pt;
 		left:unset;
 
 	}
@@ -216,10 +248,8 @@
 	{
 		margin:0;
 		width: 100%;
-		padding:10px 40px 10px 40px;
 		font-size: 24pt;
 		position: relative;
-		outline: 1px solid #FFFFFF50;
 		border-radius: 0 !important;;
 		/*left:calc(10%);
 		width:80%;
@@ -252,13 +282,14 @@
 	
 	.mail 
   {
-		outline: 1px solid #FFFFFF50;
-		border-radius: 2px;
-		box-shadow: 0px 10px 10px #00000005;
+		outline: 1px solid var(--brdrClr);
 		cursor: pointer;
 		text-align: center !important;
 		transition:all .12s;
-    border-radius: 9px;
+		margin:0;
+		width: 100% !important;
+		max-width: unset !important;
+		padding:50px 0 50px 0 !important; 
 	}
 	.mail:hover
 	{
@@ -399,14 +430,9 @@ background-image: linear-gradient(
 
 @media (min-width: 700px) and (max-width: 1000px){
 
-	.linkIcon
-	{
-		background-size: auto 30px;
-	}
-	.card.event
-	{
-    width: 50%;
-	}
+
+
+	
 }
 
 
@@ -423,7 +449,35 @@ background-image: linear-gradient(
 	}
 	.pic
 	{
-		width: calc(50% - 30px) !important;
+		width: calc(50% - 0px) !important;
+	}
+	#listenButton
+	{
+		left:0;
+		margin: 0;
+		width: 100%;
+		outline: 1px solid var(--bg4Clr);
+	}
+	#lbA,#lbB
+	{
+		width: 100%;
+		left: 0;
+	}
+	#lbA
+	{
+		top:18px;
+	}
+	#lbB
+	{
+		top:52px;
+	}
+	#lbPic
+	{
+		display: none;
+	}
+	#main
+	{
+		background:var(--bgClr);
 	}
 }
 
@@ -452,23 +506,57 @@ background-image: linear-gradient(
 	}
 	#lbA
 	{
-		line-height: 40px;
 	}
 	#lbB
 	{
 		font-size: 4vw;
-		line-height: 25px;
 		
 	}
 	#picture
 	{
-		background-size:100% 100%;
-		max-width:400px;
 	}
 
 	.credit
 	{
 		bottom:80px;
+	}
+}
+
+@media (max-height: 499px) and (min-height: 10px) and (min-width: 700px){
+	
+	.linkPage,.socials
+	{
+		width: 50% !important;
+		height: calc(100% / 3) !important;
+		
+	}
+	.socials
+	{
+		padding-left:0 !important;
+	}
+	.linkPage
+	{
+		text-indent: 25px !important;
+		font-size: 30px !important;
+		padding:0 !important;
+	}
+	.linkIcon
+	{
+		width: calc(100% / 3) !important;
+		background-size: 25px !important;
+	}
+}
+@media (max-height: 850px) and (min-height: 500px) and (min-width: 700px){
+	  .linkPage
+	{
+		text-indent: 25px !important;
+		font-size: 56px !important;
+		padding:5px 20px 5px 20px !important;
+	}
+	.linkIcon
+	{
+		background-size: 50px !important;
+		width: 30%;
 	}
 }
 /*

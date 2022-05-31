@@ -1,11 +1,15 @@
 :root{
 	--:#;
-	--bgClr:#CA73DF;
-	--fntClr:#FFF;
-	--fntClr:#000;
-	--fntClr:#FFF;
-	--bg2Clr:#F0AFE0;
-	--fnt2Clr:#FFF;
+	--bg2Clr:#FFE69ADE;
+	--bgClr:#FFD569;
+	--bgClr:#FFE869CC;
+	--bg2Clr:#FFE99A;
+	--bg3Clr:linear-gradient(288.67deg, #C04B83 0%, #88502A 40.51%, #7C4825 74.27%, #562422 99.72%);
+	--bg4Clr:#521F1F;
+	--brdrClr:#B2645B;
+	--fntClr:#FFF6E8;
+	--fnt2Clr:#521F1F;
+	--crdPddng:50px;
 	--txtShadowClr:#835685;
 	
 }
@@ -44,9 +48,9 @@ body
 	left:0;
 	height: 100vh;
 	width: 100%;
-	font-family: 'Poppins';
+	font-family: 'Yeseva One';
 	background-repeat: repeat;
-  background:url('bg2.jpg');
+  background:url('bg_unb.jpg');
 	background-color:#c386bd;
 	background-size:auto 110vh;
 	background-repeat: no-repeat;
@@ -61,7 +65,13 @@ body
 		1px -1px 0px var(--txtShadowClr)
 		;
 	*/
-  text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
+  /*text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;*/
+}
+button
+{
+	background:unset;
+	border:unset;
+	color:unset;
 }
 #bg
 {
@@ -110,13 +120,8 @@ a
 }
 @keyframes pageSlideIn
 {
-	0%{opacity:0;margin-left:-10px};
-	100%{opacity:1;margin-left:0%};
-}
-@keyframes pageSlideI
-{
-	0%{opacity:0;margin-left:-0px;transform:scale(0.98,0.98)};
-	100%{opacity:1;margin-left:0%;transform: scale(1,1)};
+	0%{}
+	100%{}
 }
 .page
 {
@@ -124,6 +129,16 @@ a
 	width: 100vw;
 	overflow:scroll;
 	position: absolute;
+	background:var(--bg2Clr);
+}
+.spH
+{
+	margin-left:-50px;
+	display: inline-block;
+	position: relative;
+	background:var(--brdrClr);
+	width: calc(100% + 100px);
+	height: 1px;
 }
 #main,#events,#about,#gallery,#contact
 {
@@ -143,21 +158,16 @@ a
 }
 #picture
 {
-	height: 80vw;
-	height: calc(80vw - 20px);
-	width: 80vw;
-	width: calc(80vw - 20px);
-	margin-top:40px;
-	margin-left:calc(10vw + 10px);
+	height: calc(100vw - 0px);
+	width: calc(100vw - 0px);
+	margin-top:0px;
 	background:url('ressources/cover.png');
-	background-size: 100% 100%;
+	background-size:cover;
 	position: relative;
+	background-position: top;
 }
 #listenButton,#picture,#lnks,.pageHead,.mail,.title.events,#eventCurrent,#eventPast
 {
-	border-radius:7px !important;	
-	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25) !important;;
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.21)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2)) !important;;	
 }
 .sp
 {
@@ -169,20 +179,15 @@ a
 }
 #lnks
 {
-	position: absolute;
 	position: relative;
-	margin-left: calc(10vw + 10px);
-	width:  calc(80vw - 20px);
+	width:  100vw;
 	height:  fit-content;
 	padding:1.5vh 0 30vh 0;
 	
 	padding: 0;
 	margin-bottom: 56px;
-	margin-top:20px;
-	border-radius: 7px;
 	text-shadow: unset !important;
-	background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
-	color:#390803 !important;
+	color:var(--fnt2Clr);
 }
 
 #lnks-desktop
@@ -195,28 +200,40 @@ a
 	width: calc(80% - 20px);
 	left: calc(10% + 10px);
 	margin-top:20px;
-	background:linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
 	position: relative;
+	background: var(--bg3Clr);
+
 }
 #lbA,#lbB
 {
+	font-family: 'Yeseva One';
 	position: absolute;
 	width: 100%;
-	color: #390803;
+	color: #FFF6E8;
 	text-align: center;
+	width: calc(100% - 125px);
+	left:125px;}
+#lbPic
+{
+	position: absolute;
+	height: 60px;
+	width: calc(100% - 25px);
+	background:url('ressources/cover.png');
+	margin:12.5px;
+	background-size: cover;
 }
 #lbA
 {
 	font-size: 30px;
-	top:10px;
+
+	top:40px;
 	font-weight: bold;
 	letter-spacing: 1px;
-
 }
 #lbB
 {
 	font-size: 13px;
-	bottom:10px;
+	bottom:30px;
 }
 .links
 {
@@ -226,33 +243,33 @@ a
 }
 .linkPage
 {
-	font-size:60px;
+	/*! font-size:60px; */
   font-weight: bold;
-	height: calc(100% / 3);
-	height:unset;
-	letter-spacing: -5px;
-	text-align: right;
-	line-height: 125%;
-	line-height: 0%;
+	/*! height: calc(100% / 3); */
+	/*! height:unset; */
+	/*! letter-spacing: -5px; */
+	/*! text-align: right; */
+	/*! line-height: 125%; */
+	/*! line-height: 0%; */
 	cursor:pointer;
-	padding:12%;
-	padding:3.85vh 2.3vw 3.85vh 2.3vw;
 	text-transform:capitalize;
-	
+	font-family: 'Yeseva One';
+	width: 100%;
 	line-height: unset;
-	padding:8px;
+	padding:20px;
 	height: auto;	
 	font-size:32px;
 	letter-spacing: 1px;
 	text-align: center;
-	border-bottom:1px solid #FFFFFF20;
+	/*! border-bottom:1px solid #FFFFFF20; */
 }
 
 .socials
 {
 	position:relative;
-	width:  100%;
+	width:  50%;
   height: 68px;
+	margin-left:25%;
 }
 .linkIcon
 {
@@ -299,11 +316,9 @@ a
 	z-index: 100;
   bottom:0;
 	top:unset !important;;
-	background:var(--bg2Clr);
-	
 	border-radius:  0 !important;;
-	color:#390803;
-	background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
+	color: var(--fntClr);
+	background: var(--bg4Clr);
 }
 
 .back
@@ -354,20 +369,14 @@ a
 {
 	position: relative;
 	margin-top:20px;
-	margin-left:10%;
-	width: 80%;
+	width: 100%;
 	font-size: 20pt;
-	outline:1px solid #FFFFFF40;
+	outline:1px solid var(--brdrClr);
 	padding:20px 0 20px 0;
 	z-index: 6;
-	border-radius: 7px 7px 0 0 !important;
 	color:#390803;
-  
-	background: linear-gradient(266.31deg, #BF6E97AA 0%, #DD94B7AA 100%), #C992D6;
-	background: #DD7FCA;
-	background: linear-gradient(266.31deg, #CE7CD540 0%, #DC83BC40 100%), #DD7FCA;
-  
-  background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
+  text-align: center;
+  background:var(--bg2Clr);
 	box-shadow: unset !important;
 	filter:unset !important;
 }
@@ -388,26 +397,22 @@ a
 }
 #eventCurrent,#eventPast
 {
-	background:#D687E1;
-	background: linear-gradient(266.31deg, #CE7CD540 0%, #DC83BC20 100%), #D687E1;
-	background:#39080340;
-	margin-top:-7px;
-	margin-left:10%;
-	width: 80%;
-	border-radius: 0 0 7px 7px !important;
+	/*background:var(--bg2Clr);*/
+	color:var(--fnt2Clr);
 	z-index: 5;
-	outline:1px solid #FFFFFF20;
 }
 .card.event
 {
   position: relative;
 	width: 100%;
 	left:0;
-	margin-top:1px;
-	padding:3vh 0 3vh 0;
-	font-size: 20px;
-	text-align: center;
-  border-top: 1px solid #FFFFFF50;
+	/*! margin-top:1px; */
+	padding:50px 0px 50px 0px;
+	font-size: 25px;
+	text-align: center !important;
+	text-align: left;
+	font-family: 'Yeseva One';
+  border-top: 1px solid #B2645B;
 }
 .sp
 {
@@ -425,26 +430,19 @@ a
 
 .bigCard
 {
-	margin-top:30px;
-	width: calc(100% - 60px);
-	margin-left:30px;
-	background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
-	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25) !important;
-	filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.21)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2)) !important;
-	border-radius: 7px;
-	outline:1px solid #FFFFFF20;
+	/*background:var(--bg2Clr);*/
+	width: 100%;
 }
 .card.text
 {
   position: relative;
-	width: 80vw;
-	font-size: 20px;
+	font-size: 25px;
 	text-align: left;
-	
-	width: calc(100% - 40px);
+	padding:40px;
+	width: calc(100% - 80px);
 	color: #390803;
-  padding:20px;
-	border-bottom: 1px solid #00000010;
+  /*! padding:20px; */
+	padding-bottom:25px;
 }
 .card.text,.card.event
 {
@@ -454,11 +452,12 @@ a
 
 .pic
 {
-	width: calc(25% - 30px);
+	position: relative;
+	float:left;
+	width: calc(50% - 0px);
 	margin:20px 0px 0px 20px;
+	margin:0;
 	cursor: pointer;
-	border-radius: 3px;
-	outline: 1px solid #FFFFFF50;
 }
 #modalBlock {
   position: fixed;
@@ -501,8 +500,8 @@ a
   background-position: center;
   cursor: pointer;
   transition: filter var(--speed1);
-  background-color: #101010;
   background-color: unset;
+  background-color: var(--bg4Clr);
   background-repeat: no-repeat;
 }
 #previous{
@@ -530,20 +529,15 @@ a
   font-size: 40px;
   padding: 40px 0 40px 0;
   position: relative;
-  width: 100vw;
-	background: #FFFFFF0D;
-	outline: 1px solid #00000020;
-	border-radius: 2px;
-	box-shadow: 0px 10px 10px #00000005;
+	background: var(--bg2Clr);
+	outline: 1px solid var(--brdrClr);
 	cursor: pointer;
-	text-align: center !important;
-	border-radius: 9px;
-	color: #390803;
-	margin-top:20px;
-	margin-left:30px;
-	width: calc(100% - 100px) !important;
+	color: var(--fntClr);
+	width: 100% !important;
+		text-align: center !important; 
 	font-weight: bold;
-  background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
+	padding:40px 0 40px 0 !important;
+
 }
 .mail.copied
 {
