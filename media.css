@@ -491,6 +491,10 @@ background-image: linear-gradient(
 	}
 	iframe
 	{
+		
+		height:auto;
+		width: 100%;
+	  aspect-ratio: 16 / 9;
 		max-height:281.5px;
 		margin:unset;
 	}

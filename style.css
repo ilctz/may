@@ -7,8 +7,8 @@
 	--fontColor1:#f4f0ff;
 	--fontColor2:#646bd6;
 	
-	--selectColor1:#2E28FF52;
-	--selectColor2:#FFF;
+	--selectColor1:#ffffff9c;
+	--selectColor2:#6848DBD6;
 	--bg2Clr:#F0AFE0;
 	--fnt2Clr:#FFF;
 	--txtShadowClr:#835685;
@@ -207,13 +207,15 @@ a
 }
 iframe
 {
-	
 	margin-top:40px;
 	height: calc(80vw - 20px);
 	position: relative;
 	width: 100%;
   max-height:500px;
 	border-radius: var(--borderRadius) var(--borderRadius) 0 0 !important;
+	height:auto;
+	width: 100%;
+	aspect-ratio: 16 / 9;
 }
 .sp
 {
