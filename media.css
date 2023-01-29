@@ -1,5 +1,5 @@
 
-@media (max-width: 870px) and (min-width: 700px){
+@media (max-width: 900px) and (min-width: 700px){
   .linkPage
 	{
 		font-size: 14pt !important;
@@ -58,6 +58,7 @@
 		height: 500px;
 		width: 500px;
 		margin-left:calc(50% - 250px); 
+		margin-left:0px; 
 		border-radius: 1px;
 	}
 	#lnks
@@ -78,8 +79,10 @@
 		height: 80px;
 		z-index: 110;
 		outline: 1px solid #FFFFFF50;
-    background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, .07) 50%, rgba(255, 207, 250, 0.31) 100%), #EBB21F;
-		color:390803;
+		background:var(--gradient1);
+		color:var(--fontColor1);
+		-webkit-backdrop-filter: var(--bgFilter1);
+    backdrop-filter: var(--bgFilter1);
 	}
 	#dot
 	{
@@ -89,18 +92,25 @@
 		height: 2px;
 		bottom:0px;
 		border-radius: 0px;
-		background-color: #390803;
+		background: var(--thinLineColor);
+		background: #FFFFFF;
 		transition: left .08s ease-in-out;
 	}
 	#listenButton
 	{
 		height: 80px;
-		left: calc(50% - 250px);
-		margin-top:20px;
-		background:linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
+		left: 25px;
+		left: 0px;
+		margin-top:0px;
+		background:var(--gradient1);
 		position: relative;
 		width:500px;
 		margin-bottom:100px;
+		width: 100%;
+
+	}
+	iframe
+	{
 	}
 	/*
 		height: 1px;
@@ -125,6 +135,11 @@
 		height: 100%;
 		float:left;
 	}
+	.links,.socials
+	{
+
+	
+	}
 	.socials
 	{
 		height: 80px;
@@ -136,10 +151,21 @@
 		float: left;
 		transition:all .12s;
 	}
-	.linkPage:hover,.linkIcon:hover
+	.linkPage:hover
 	{
-		color:white;
-		background-color:390803;
+		color:var(--fontColor2);
+		background-color:var(--bgColor2);
+	}
+	#listenButton:hover
+	{
+		color:#000;
+		background-color:var(--bgColor3);
+	}
+	.linkPage.logo:hover,.linkIcon:hover
+	{
+		filter:invert(100%);
+		color:var(--fontColor2);
+		background-color:#000;
 	}
 	.linkPage
 	{
@@ -147,23 +173,32 @@
 		font-size: 60px;
     margin: unset;
 		width: auto;
-		padding: 40px 20px 40px 20px;
+		/*padding: 40px 20px 40px 20px;
 		letter-spacing: -5px;
 		text-align: center;
-		cursor: pointer;
     font-size: 20pt;
-		letter-spacing: -1px;
+		letter-spacing: -1px;*/
 		
+		cursor: pointer;
 		padding:0 20px 0 20px;
-		text-transform: capitalize;
+		text-transform:full-size-kana;
 		line-height: 75px;
 		height: 100%;
 		font-size: 20pt;
-		letter-spacing: 1px;
+		letter-spacing: -1px;
 		text-align: center;
-		border-bottom: 1px solid #FFFFFF20;
+		border-bottom: 1px solid var(--thinLineColor);
+		box-shadow: 1px 0px var(--thinLineColor);
 		
 
+	}
+  .linkPage.logo
+	{
+		width: 20%;
+		background-image:url('logoNoShadow.svg');
+		background-size:90%;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	.linkIcon
 	{
@@ -173,13 +208,12 @@
 	}
 	.card.text
 	{
-		margin-left:calc(50% - 250px);
 		width: 500px;
 		left:unset;
 		width: calc(100% - 80px);
-		margin-left:20px;
 		font-size: 20pt;
 		text-align: left;
+		margin-left:calc(50% - 350px);
 	}
 
 	.card.event
@@ -216,7 +250,7 @@
 	{
 		margin:0;
 		width: 100%;
-		padding:10px 40px 10px 40px;
+		padding:10px 0px 10px 0px;
 		font-size: 24pt;
 		position: relative;
 		outline: 1px solid #FFFFFF50;
@@ -262,8 +296,8 @@
 	}
 	.mail:hover
 	{
-		background: #390803;		
-		color:white;
+		background: var(--bgColor2);		
+		color:var(--fontColor2);
 	}
 	.modal-content {
   background-size: auto 75vh !important;
@@ -415,7 +449,7 @@ background-image: linear-gradient(
   .page:not(#main)
 	{
 		margin-top:0px;
-		height: calc(100vh - 80px);
+		height: calc(100vh - 160px);
 	}
 .pageHead
 	{
@@ -424,6 +458,54 @@ background-image: linear-gradient(
 	.pic
 	{
 		width: calc(50% - 30px) !important;
+	}
+	#picture
+	{
+		float:none;
+		width: 100%;
+    margin:unset;
+		max-width:unset;
+		max-height:unset;
+	}
+	.bigCard
+	{
+			margin-left:30px;
+	}
+	#newSingle
+	{
+		left:0;
+		position: relative;
+		margin-left: calc(10vw + 10px);
+		width: calc(80vw - 20px);
+		height: fit-content;
+		padding: 1.5vh 0 30vh 0;
+		padding: 0;
+		/*! margin-top: 20px; */
+		text-shadow: unset !important;
+		color: var(--fontColor1) !important;
+	}
+	#listenButton
+	{
+		left:0;
+		width: 100%;
+	}
+	iframe
+	{
+		max-height:281.5px;
+		margin:unset;
+	}
+	.mobileLogo
+	{
+		background-image:url('logo.svg');
+		background-size:90%;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 80px;
+		position: relative;
+		margin-left: calc(10vw + 10px);
+		width: calc(80vw - 20px);
+		padding: 0;
+		/*! margin-top: 20px; */
 	}
 }
 

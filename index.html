@@ -11,7 +11,7 @@
 		<meta name="viewport" content="height=device-height, initial-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Yeseva+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Work+Sans&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -27,14 +27,19 @@
 			</div>
 		</div>
 
-		<div id="bg"></div>
-		<div id="bgPic-blur"></div>
-		<div id="gIntro" style="display:none;">Check out Martha May's debut single Breakaway, available on all streaming platforms April 1st.<br></div>
+		<!-- <div id="bg"></div> -->
+		<!-- <div id="bgPic-blur"></div> -->
+		<div id="gIntro" style="display:none;">Check out Martha May's new single Distance, available on all streaming platforms!<br></div>
+		<div class="mobileLogo"></div>
+
 		<div id="lnks-desktop">
+
 			<div class="links">
+
 				<div id=dot></div>
 
-				<div class="linkPage" onclick="pickPage(0)">home</div>
+
+				<div class="linkPage logo" onclick="pickPage(0)"></div>
 				<div class="linkPage" onclick="pickPage(1)">about</div>
 				<div class="linkPage" onclick="pickPage(2)">events</div>
 				<div class="linkPage" onclick="pickPage(3)">gallery</div>
@@ -53,15 +58,18 @@
 		</div>
 
 		<div id="main" class="page on">
-			<div id="bgPic"></div>
+			<!-- <div id="bgPic"></div> -->
 			<!-- <div id="title"> </div> -->
-			<div id="picture"></div>
-			<a href="https://linktr.ee/marthamaymusic">
-				<div id="listenButton">
-					<span id="lbA">Available now!</span>
-					<span id="lbB">Click here to listen</span>
-				</div>
-			</a>
+			<div id="newSingle">
+				<!-- <div id="picture"></div> -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Qtgti23tD_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<a href="https://linktr.ee/marthamaymusic">
+					<div id="listenButton">
+						<span id="lbA">Available now!</span>
+						<span id="lbB">Click here to listen on all platforms</span>
+					</div>
+				</a>
+			</div>
 			<div id="lnks">
 				<div class="links">
 
@@ -87,7 +95,7 @@
 
 		<div id="about" class="page">
 			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">Back</div>
+				<div class="back" onclick="pickPage(0)">≡</div>
 				<div class="title menu">About</div>
 			</div>
 			<!-- <div class="content"> -->
@@ -119,7 +127,7 @@
 
 		<div id="events" class="page">
 			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">Back</div>
+				<div class="back" onclick="pickPage(0)">≡</div>
 				<div class="title menu">Events</div>
 			</div>
 				<div class="title events">Upcoming events</div>
@@ -138,7 +146,11 @@
 						</div>
 					</div> -->
 
-
+					<div class="card event select">
+						<div class="event date">
+							<div class="event daymonthyear">Soon!</div>
+						</div>
+					</div>
 
 
 
@@ -158,7 +170,7 @@
 							<div class="event adress2">London E3 3LT</div>
 						</div>
 					</div>
-					
+
 					<div class="card event select">
 						<div class="event date">
 							<div class="event daymonthyear">May 20 2022</div>
@@ -251,28 +263,51 @@
 
 		<div id="gallery" class="page">
 			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">Back</div>
+				<div class="back" onclick="pickPage(0)">≡</div>
 				<div class="title menu">Gallery</div>
 			</div>
-			<img src="ressources/pic1.jpg" class="pic">
-			<img src="ressources/pic4.jpg" class="pic">
-			<img src="ressources/pic5.jpg" class="pic">
+			<img src="ressources/pic013.jpg" class="pic">
+			<img src="ressources/pic012.jpg" class="pic">
+			<img src="ressources/pic011.jpg" class="pic">
+			<img src="ressources/pic010.jpg" class="pic">
+			<img src="ressources/pic009.jpg" class="pic">
+			<img src="ressources/pic008.jpg" class="pic">
+			<img src="ressources/pic007.jpg" class="pic">
+			<img src="ressources/pic005.jpg" class="pic">
+			<img src="ressources/pic004.jpg" class="pic">
+			<img src="ressources/pic003.jpg" class="pic">
+			<img src="ressources/pic002.jpg" class="pic">
+			<img src="ressources/pic001.jpg" class="pic">
 			<!-- <iframe class="pic ytbe" src="https://www.youtube.com/watch?v=ScMzIvxBSi4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe> -->
 		</div>
 
 		<div id="contact" class="page">
 			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">Back</div>
+				<div class="back" onclick="pickPage(0)">≡</div>
 				<div class="title menu">Contact</div>
 			</div>
 
 				<!-- <div class="card text mail select">musicbymarthamay@gmail.com</div> -->
 				<div class="card text mail cope" onclick="cope(this)">musicbymarthamay@gmail.com</div>
+				<!-- <a href="ressources/EPK_Martha_May.pdf"  download>
+					<div class="card text mail" onclick="">Distance Electronic Press Kit</div>
+				</a> -->
 				<a href="ressources/EPK_Martha_May.pdf"  download>
-					<div class="card text mail" onclick="">Electronic Press Kit</div>
+					<div class="card text mail" onclick="">Breakaway Electronic Press Kit</div>
 				</a>
 				<a href="https://www.4d74.me">
-					<div class="credit"></div>
+					<div class="wdcredit">
+
+						<div class="wda">
+							<div class="wdmba">Made by</div>
+							<div class="wdica"></div>
+						</div>
+
+						<div class="wdb">
+							<div class="wdmbb">Go Visit</div>
+							<div class="wdicb"></div>
+						</div>
+					</div>
 				</a>
 		</div>
 	</body>
