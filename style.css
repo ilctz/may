@@ -61,6 +61,10 @@ html{
 	-khtml-user-select: all;
 	-moz-user-select: all;
 }
+#vid00
+{
+	display: none;
+}
 body
 {
 
