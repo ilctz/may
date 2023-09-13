@@ -27,10 +27,8 @@
 			</div>
 		</div>
 
-		<!-- <div id="bg"></div> -->
 		<!-- <div id="bgPic-blur"></div> -->
 		<div id="gIntro" style="display:none;">Check out Martha May's new single Distance, available on all streaming platforms!<br></div>
-		<div class="mobileLogo"></div>
 
 		<div id="lnks-desktop">
 
@@ -39,29 +37,54 @@
 				<div id=dot></div>
 
 
-				<div class="linkPage logo" onclick="pickPage(0)"></div>
+				<!-- <div class="linkPage logo" onclick="pickPage(0)"></div> -->
 				<div class="linkPage" onclick="pickPage(1)">about</div>
-				<div class="linkPage" onclick="pickPage(2)">events</div>
+				<!-- <div class="linkPage" onclick="pickPage(2)">events</div> -->
+				<div class="linkPage" onclick="pickPage(3)">gallery</div>
+				<div class="linkPage" onclick="pickPage(4)">contact</div>
+				<div class="socials">
+					<a href="https://www.instagram.com/martha_may_music/">
+						<div class="instagram linkIcon"></div>
+					</a>
+						<a href="https://www.tiktok.com/@martha_may_music">
+						<div class="tiktok linkIcon"></div>
+					</a>
+					<a href="https://open.spotify.com/artist/53cceVtscntcZcSRWGwFUh?si=JaWJdbkhQi2EfZTALOLgpQ">
+						<div class="spotify linkIcon"></div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<div id="lnks">
+			<div class="links">
+
+				<div class="linkPage" onclick="pickPage(1)">about</div>
+				<!-- <div class="linkPage" onclick="pickPage(2)">events</div> -->
 				<div class="linkPage" onclick="pickPage(3)">gallery</div>
 				<div class="linkPage" onclick="pickPage(4)">contact</div>
 			</div>
-
 			<div class="socials">
 				<a href="https://www.instagram.com/martha_may_music/">
 					<div class="instagram linkIcon"></div>
 				</a>
-					<a href="https://www.tiktok.com/@martha_may_music">
+				<a href="https://www.tiktok.com/@martha_may_music">
 					<div class="tiktok linkIcon"></div>
 				</a>
-				<div class="spotify linkIcon"></div>
+				<a href="https://open.spotify.com/artist/53cceVtscntcZcSRWGwFUh?si=JaWJdbkhQi2EfZTALOLgpQ">
+					<div class="spotify linkIcon"></div>
+				</a>
 			</div>
+
 		</div>
 
 		<div id="main" class="page on">
+			<div class="mobileLogo"></div>
+
 			<!-- <div id="bgPic"></div> -->
 			<!-- <div id="title"> </div> -->
-			<div id="newSingle">
-				<!-- <div id="picture"></div> -->
+
+			<!-- <div id="newSingle">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/Qtgti23tD_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				<a href="https://linktr.ee/marthamaymusic">
 					<div id="listenButton">
@@ -69,38 +92,23 @@
 						<span id="lbB">Click here to listen on all platforms</span>
 					</div>
 				</a>
+			</div> -->
+			<div id="bg"></div>
+			<div id="bgDesktop">
+				<div class="bgD" id="bgD1"></div>
+				<div class="bgD" id="bgD2"></div>
+				<div class="bgD" id="bgD3"></div>
 			</div>
-			<div id="lnks">
-				<div class="links">
 
-					<div class="linkPage" onclick="pickPage(1)">about</div>
-					<div class="linkPage" onclick="pickPage(2)">events</div>
-					<div class="linkPage" onclick="pickPage(3)">gallery</div>
-					<div class="linkPage" onclick="pickPage(4)">contact</div>
-				</div>
-				<div class="socials">
-					<a href="https://www.instagram.com/martha_may_music/">
-						<div class="instagram linkIcon"></div>
-					</a>
-					<a href="https://www.tiktok.com/@martha_may_music">
-						<div class="tiktok linkIcon"></div>
-					</a>
-					<a href="https://open.spotify.com/artist/53cceVtscntcZcSRWGwFUh?si=UnKo-YP2QZS0ARMnA0T7pw">
-						<div class="spotify linkIcon"></div>
-					</a>
-				</div>
 
-			</div>
 		</div>
 
 		<div id="about" class="page">
-			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">≡</div>
-				<div class="title menu">About</div>
-			</div>
+
 			<!-- <div class="content"> -->
 			<!-- <div class="content-in"> -->
-				<!-- <img class="pic" src="picture.jpg"> -->
+			<div id="picAbout"></div>
+			<div id="picAboutAlt"></div>
 			<div class="bigCard">
 				<div class="card text select">
 
@@ -108,8 +116,8 @@
 					singing was constant throughout Martha's life, and it was the passion for performing specifically that
 					made her move to the United Kingdom at 18 to study Musical Theatre at The University of
 					Chichester.
-
 				 </div>
+				 <!-- <img class="image about"src="picture.jpg" alt=""> -->
 				 <div class="card text select">
 					 Her path as a composer and lyricist started in her 3rd year of study, while she was learning to play
 					 guitar in her Chichester bedroom. Once she discovered this new passion for creating her own
@@ -151,10 +159,7 @@
 			</div>
 
 		<div id="events" class="page">
-			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">≡</div>
-				<div class="title menu">Events</div>
-			</div>
+
 				<div class="title events">Upcoming events</div>
 				<div id="eventCurrent">
 
@@ -293,10 +298,7 @@
 		</div>
 
 		<div id="gallery" class="page">
-			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">≡</div>
-				<div class="title menu">Gallery</div>
-			</div>
+
 			<img src="ressources/pic013.jpg" class="pic">
 			<img src="ressources/pic012.jpg" class="pic">
 			<img src="ressources/pic011.jpg" class="pic">
@@ -313,10 +315,7 @@
 		</div>
 
 		<div id="contact" class="page">
-			<div class="pageHead">
-				<div class="back" onclick="pickPage(0)">≡</div>
-				<div class="title menu">Contact</div>
-			</div>
+
 
 				<!-- <div class="card text mail select">musicbymarthamay@gmail.com</div> -->
 				<div class="card text mail cope" onclick="cope(this)">musicbymarthamay@gmail.com</div>

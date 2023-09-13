@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
 :root{
 	--:#;
 	--bgColor1:#4850D0C2;
-	--bgColor2:#FFFFFF;
-	--bgColor3:#FFFFFFC2;
-	
-	--fontColor1:#f4f0ff;
-	--fontColor2:#646bd6;
+	--bgColor2:#101010;
+	--bgColor3:#FFFFFF;
+  --bgText1:#FFFFFF;
+
+	--fontColor1:#252525;
+	--fontColor2:#FFFFFF;
 	
 	--selectColor1:#ffffff9c;
 	--selectColor2:#6848DBD6;
@@ -15,15 +18,14 @@
 	--gradient1:linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, .07) 50%, rgba(255, 207, 250, 0.31) 100%), var(--bgColor1);
   --gradient2:linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), var(--bgColor1);
 position: relative;
-	--thinLineColor:#FFFFFF20;
+	--thinLineColor:#FFFFFF10;
 	--bgFilter1: blur(20px) saturate(170%);
 	--bgFilter2: blur(6px);
 	--outline1:1px solid #9d28ff99;
-	
+	--lnksHeight:(40px + 6vh + 6vw);
 	--borderRadius:7px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;600&family=Work+Sans&display=swap');
 
 ::-moz-selection { /* Code for Firefox */
   color: var(--selectColor1);
@@ -74,12 +76,11 @@ body
 	left:0;
 	height: 100vh;
 	width: 100%;
-  font-family: 'Rubik', sans-serif;
-	background-repeat: repeat;
-  background:url('bg2.jpg');
-	background-color:#c386bd;
+  font-family: 'DM Sans', sans-serif;
+	background-color:var(--bgColor3);
 	background-size:auto 110vh;
 	background-repeat: no-repeat;
+	background-position-x: center;
 	color:var(--fontColor1);
   /*
 	text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
@@ -91,7 +92,6 @@ body
 		1px -1px 0px var(--txtShadowClr)
 		;
 	*/
-  text-shadow: 0px 0px 2px #00000020,0px 0px 12px #00000030;
 }
 #bg
 {
@@ -100,9 +100,8 @@ body
 	position:fixed;
 	top:0;
 	left:0;
-	height: 100vh;
-	width: 100%;
-	opacity: 45%;
+	height: calc(100vh - var(--lnksHeight) - 38px);
+	width: calc(100% - 30px);
 	/*! background-image: linear-gradient(
   35deg,
   hsl(272deg 67% 63%) 0%,
@@ -110,8 +109,49 @@ body
   hsl(317deg 63% 71%) 61%,
   hsl(334deg 55% 64%) 100%
   ); */
+	background: url('bg2.jpg');
+			background-color: rgba(0, 0, 0, 0);
+			background-position-x: 0%;
+			background-repeat: repeat;
+			background-size: auto;
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  background-position-x: center;
 	z-index: -2;
+	border:15px solid white;
 }
+#bgDesktop
+{
+	height: 100vh;
+	width: 100vw;
+	display: none;
+}
+.bgD
+{
+	position: absolute;
+	height: calc(100vh - 80px - 30px);
+	border: 15px  solid white;
+	width: calc(100% / 3);
+  background-size: auto 110vh;
+  background-repeat: no-repeat;
+  background-position: center !important;
+}
+#bgD1
+{
+	background: url('bg1.jpg');
+	left:0;
+}
+#bgD2
+{
+	left:calc(100% / 3);
+	background: url('bg2_alt.jpg');
+}
+#bgD3
+{
+	right: 0;
+	background: url('bg3.jpg');
+}
+
 #bgPic
 {
 	background:url('bg_unb.jpg');
@@ -155,9 +195,17 @@ a
 	overflow:scroll;
 	position: absolute;
 }
+#gallery
+{
+	background-color: var(--bgColor3);
+}
 #main,#events,#about,#gallery,#contact
 {
 	display: none;
+}
+#about
+{
+	background-color: var(--bgColor3);
 }
 #title
 {
@@ -175,9 +223,6 @@ a
 #listenButton,#picture,#lnks,.pageHead,.mail,.title.events,#eventCurrent,#eventPast
 {
 	font-weight: 300 !important;
-	border-radius:var(--borderRadius) !important;	
-	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25) !important;;
-  backdrop-filter:var(--bgFilter);
 }
 #picture
 {
@@ -231,21 +276,16 @@ iframe
 }
 #lnks
 {
-	position: absolute;
-	position: relative;
-	margin-left: calc(10vw + 10px);
-	width:  calc(80vw - 20px);
+	position: fixed;
+	bottom:0;
+	margin-left:0;
+	width:  100%;
 	height:  fit-content;
-	padding:1.5vh 0 30vh 0;
-	
+	z-index: 200;
 	padding: 0;
-	margin-bottom: 56px;
-	margin-top:20px;
-	border-radius: 7px;
 	text-shadow: unset !important;
-  backdrop-filter:var(--bgFilter2);
-	background: var(--gradient2);
-	color:var(--fontColor1) !important;
+	background: var(--bgColor2);
+	color:var(--fontColor2) !important;
 }
 
 #lnks-desktop
@@ -286,31 +326,27 @@ iframe
 {
 	position: relative;
 	width:100%;
-	height:fit-content;
+	height:calc(6vw + 20px);
 }
 .linkPage
 {
-	font-size:60px;
+	font-size:30px;
 	height: calc(100% / 3);
 	height:unset;
 	letter-spacing: -5px;
 	text-align: right;
-	line-height: 125%;
-	line-height: 0%;
 	cursor:pointer;
 	padding:12%;
 	padding:3.85vh 2.3vw 3.85vh 2.3vw;
-	text-transform:capitalize;
+	text-transform:lowercase;
 	
 	line-height: unset;
-	padding:8px;
-	height: auto;	
-	font-size:32px;
+	padding:10px 0px 10px 0;
+	width:calc(100% / 3);
 	letter-spacing: 1px;
 	text-align: center;
 	border-bottom:1px solid #FFFFFF20;
-	
-  font-weight:;
+	float:left;
 	
 }
 
@@ -318,7 +354,7 @@ iframe
 {
 	position:relative;
 	width:  100%;
-  height: 68px;
+  height: calc(6vh + 20px);
 }
 .linkIcon
 {
@@ -488,14 +524,9 @@ iframe
 
 .bigCard
 {
-	margin-top:30px;
-	width: calc(100% - 60px);
+	width: calc(100% - 0px);
 	margin-left:30px;
-	background: var(--gradient1);
-	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25) !important;
-	filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.21)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2)) !important;
-	border-radius: 7px;
-	outline:var(--outline1);
+	background: var(--bgText1);
 	max-width: 700px;
 	position: absolute;
 	margin-left:calc(50% - 350px);
@@ -504,13 +535,12 @@ iframe
 {
   position: relative;
 	width: 80vw;
-	font-size: 20px;
+	font-size: 25px;
 	text-align: left;
 	
 	width: calc(100% - 40px);
 	color: var(--fontColor1);
   padding:20px;
-	border-bottom: 1px solid #00000010;
 	max-width: 700px;
 }
 .card.text,.card.event
@@ -521,18 +551,18 @@ iframe
 
 .pic
 {
-	width: calc(25% - 30px);
-	margin:20px 0px 0px 20px;
+	width: calc(50% - 30px);
 	cursor: pointer;
-	border-radius: 3px;
-	outline: 1px solid #FFFFFF50;
+	float:left;
+	border:15px solid white;
+	outline:1px solid #EEE;
 }
 #modalBlock {
   position: fixed;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 200;
+  z-index: 300;
   display: none;
   transition: opacity var(--speed1);
   background-color: rgba(0,0,0,.8);
@@ -599,7 +629,6 @@ iframe
   /*! position: relative; */
   /*! width: 100vw; */
 	/*! background: #FFFFFF0D; */
-	outline: var(--outline1);
 	/*! border-radius: 2px; */
 	/*! box-shadow: 0px 10px 10px #00000005; */
 	cursor: pointer;
@@ -611,7 +640,7 @@ iframe
 	width: calc(100% - 100px) !important;
 	font-weight: bold;
   background: linear-gradient(266.31deg, rgba(255, 207, 250, 0.31) 0%, rgba(255, 96, 96, 0.07) 100%), #EBB21F;
-  background:var(--gradient1);
+  background:var(--bgColor3);
   backdrop-filter:var(--bgFilter);
 }
 .mail.copied

@@ -3,6 +3,7 @@
   .linkPage
 	{
 		font-size: 14pt !important;
+		padding:25px 20px 25px 20px !important;
 	}
 	.linkIcon
 	{
@@ -10,6 +11,25 @@
 	}
 }
 @media (min-width: 700px){
+	#bgDesktop
+	{
+		display: block;
+	}
+	.mobileLogo
+	{
+		background-image:url('logo.svg');
+		background-size:90%;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 100vh;
+		position: fixed;
+		top:0;
+		margin-left: calc(10vw + 10px);
+		width: calc(80vw - 20px);
+		padding: 0;
+		z-index: 100;
+		/*! margin-top: 20px; */
+	}
 	#bgPic
 	{
 		position: absolute;
@@ -18,15 +38,15 @@
 	}
 	body
 	{
-			background-size:100vw 100vh;
-	background-size:120vw auto;
-
+		background-size:100vw;
+		background-position-x: center;
+		background-position-y: 10%;
 	}
 	.page
 	{
 		overflow-x: hidden;
 		overflow-y: auto;
-		margin-top:80px;
+		margin-bottom:80px;
 		height: calc(100vh - 80px);
 	}
 	#main
@@ -61,28 +81,48 @@
 		margin-left:0px; 
 		border-radius: 1px;
 	}
+	.pic
+	{
+		width: calc(25% - 30px);
+	}
 	#lnks
 	{
     display: none;
 	}
 
-	
-	
 
+	img.about
+	{
+		width: 40%;
+		float: left;
+	}
+	#picAboutAlt
+	{
+		position: fixed;
+		height: calc(100vh - 80px - 30px);
+		top:0;
+		right:0;
+		width: 45%;
+		border:15px solid white;
+		background: url('aboutAlt.jpg');
+		background-size: 100vh;
+		z-index: 100;
+		background-position: center;
+	}
 	#lnks-desktop
 	{
 		background: #FFFFFF15;
 		display: block;
 		position: fixed;
-		top: 0;
+		bottom: 0;
 		width: 100vw;
 		height: 80px;
 		z-index: 110;
 		outline: 1px solid #FFFFFF50;
-		background:var(--gradient1);
-		color:var(--fontColor1);
-		-webkit-backdrop-filter: var(--bgFilter1);
-    backdrop-filter: var(--bgFilter1);
+		background:var(--bgColor2);
+		color:var(--fontColor2);
+		/*-webkit-backdrop-filter: var(--bgFilter1);
+    backdrop-filter: var(--bgFilter1);*/
 	}
 	#dot
 	{
@@ -131,7 +171,9 @@
 	
 	.links
 	{
-		width: 80%;
+		left:calc((50% - (((100px + 40px) * 3) - (80px * 3))) / 2);
+		left:calc(50% - 330px);
+		width: fit-content;
 		height: 100%;
 		float:left;
 	}
@@ -144,7 +186,7 @@
 	{
 		height: 80px;
 		float:left;
-		width: 20%;
+		width: auto;
 	}
 	.linkPage,.linkIcon
 	{
@@ -153,8 +195,8 @@
 	}
 	.linkPage:hover
 	{
-		color:var(--fontColor2);
-		background-color:var(--bgColor2);
+		color:var(--fontColor1) !important;
+		background-color:var(--bgColor3) !important;
 	}
 	#listenButton:hover
 	{
@@ -170,9 +212,8 @@
 	.linkPage
 	{
 		position: relative;	
-		font-size: 60px;
     margin: unset;
-		width: auto;
+		width: 100px;
 		/*padding: 40px 20px 40px 20px;
 		letter-spacing: -5px;
 		text-align: center;
@@ -181,14 +222,13 @@
 		
 		cursor: pointer;
 		padding:0 20px 0 20px;
+		padding:20px;
 		text-transform:full-size-kana;
-		line-height: 75px;
 		height: 100%;
 		font-size: 20pt;
+		font-size: 27px;
 		letter-spacing: -1px;
 		text-align: center;
-		border-bottom: 1px solid var(--thinLineColor);
-		box-shadow: 1px 0px var(--thinLineColor);
 		
 
 	}
@@ -203,17 +243,25 @@
 	.linkIcon
 	{
 		float:left;
-		width: calc(100% / 3);
+    /*! padding: 0 20px 0 20px; */
 		height: 100%;
+		width: 80px;
+	}
+	  .bigCard
+	{
+		width: 100%;
+		margin:unset;
+		max-width: unset;
 	}
 	.card.text
 	{
-		width: 500px;
 		left:unset;
-		width: calc(100% - 80px);
-		font-size: 20pt;
+		width: 100%;
+		width: calc(100% - 30px - 50%);
+		font-size: 25pt;
 		text-align: left;
-		margin-left:calc(50% - 350px);
+		/*! width: 50% !important; */
+		max-width: unset;
 	}
 
 	.card.event
@@ -286,13 +334,9 @@
 	
 	.mail 
   {
-		outline: 1px solid #FFFFFF50;
-		border-radius: 2px;
-		box-shadow: 0px 10px 10px #00000005;
 		cursor: pointer;
 		text-align: center !important;
 		transition:all .12s;
-    border-radius: 9px;
 	}
 	.mail:hover
 	{
@@ -448,8 +492,8 @@ background-image: linear-gradient(
 @media (max-width: 700px){
   .page:not(#main)
 	{
-		margin-top:0px;
-		height: calc(100vh - 160px);
+		margin-top:0vh;
+		height: calc(100vh - var(--lnksHeight));
 	}
 .pageHead
 	{
@@ -458,6 +502,17 @@ background-image: linear-gradient(
 	.pic
 	{
 		width: calc(50% - 30px) !important;
+	}
+	#picAbout
+	{
+		position: fixed;
+		height: 20vh;
+		top:0;
+		width: calc(100vw - 30px);
+		background: url('about.jpg');
+		background-size: calc(100vw - 30px);
+		background-position: center;
+		border:15px solid white;
 	}
 	#picture
 	{
@@ -469,7 +524,11 @@ background-image: linear-gradient(
 	}
 	.bigCard
 	{
-			margin-left:30px;
+		margin-left:0px;
+		top:20vh;
+		overflow: scroll;
+		position: fixed;
+		height: calc(100vh - var(--lnksHeight) - 20vh);
 	}
 	#newSingle
 	{
@@ -504,8 +563,9 @@ background-image: linear-gradient(
 		background-size:90%;
 		background-repeat: no-repeat;
 		background-position: center;
-		height: 80px;
-		position: relative;
+		height: 100vh;
+		position: fixed;
+		top:0;
 		margin-left: calc(10vw + 10px);
 		width: calc(80vw - 20px);
 		padding: 0;
@@ -534,7 +594,7 @@ background-image: linear-gradient(
 	}
   .linkPage,#lbA
 	{
-		font-size: 8vw;
+		font-size: 6vw;
 	}
 	#lbA
 	{
