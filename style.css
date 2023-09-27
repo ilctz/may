@@ -120,35 +120,53 @@ body
 	z-index: -2;
 	border:15px solid white;
 }
-#bgDesktop
+#bgDesktop,#bgDesktopTop
 {
 	height: 100vh;
 	width: 100vw;
 	display: none;
+	position: absolute;
 }
-.bgD
+.bgD,.bgDTop
 {
 	position: absolute;
 	height: calc(100vh - 80px - 30px);
 	border: 15px  solid white;
 	width: calc(100% / 3);
+	width: calc((100% / 3) - 15px);
   background-size: auto 110vh;
+  background-size: auto 100vh  !important;
   background-repeat: no-repeat;
   background-position: center !important;
+
 }
-#bgD1
+.bgDTop
 {
+	opacity: 0;
+	z-index: 201 !important;
+	transition: all .18s;
+}
+.bgDTop:hover
+{
+	opacity:1;
+	filter:saturate(105%) brightness(1.1);
+}
+#bgD1,#bgD1Top
+{
+	z-index: 50;
 	background: url('bg1.jpg');
-	left:0;
+	left:-15px;
 }
-#bgD2
+#bgD2,#bgD2Top
 {
-	left:calc(100% / 3);
+	z-index: 51;
+	left:calc((100% / 3) - 7px);
 	background: url('bg2_alt.jpg');
 }
-#bgD3
+#bgD3,#bgD3Top
 {
-	right: 0;
+	z-index: 50;
+	right: -15px;
 	background: url('bg3.jpg');
 }
 
