@@ -5,93 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-       * {
-         margin: 0;
-         padding: 0;
-         border: 0;
-       }
 
-       body {
-         background-color: #F6AFA7;
-         font-size: 29px;
-         max-width: 800px;
-         margin: 0 auto;
-         text-align:center;
-         padding: 3%;
-         background-image:url("https://marthamaymusic.com/mail3.png");
-         background-size:100% auto;
-         background-position:0 0;
-         background-repeat:repeat-x;
-       }
-       #bg {
-         position:fixed;
-         z-index:-1;
-         top:0;
-         left:0;
-         width:100%;
-         height:100%;
-       }
-       h1, h3, p, a{
-         font-family: "Poppins", sans-serif;
 
-       }
-       h2 {
-         font-family: "Yeseva One", sans-serif;
-         color:#390803;
-       }
-       img {
-         max-width: 80%;
-       }
+    @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
 
-       header {
-         width: 98%;
-       }
+    body {
+      background-color: #F6AFA7;
+      font-size: 29px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align:center;
+      padding: 3%;
+      background-image:url("https://marthamaymusic.com/mail3.png");
+      background-size:100% auto;
+      background-position:0 0;
+      background-repeat:repeat-x;
+    }
+    #bg {
+      position:fixed;
+      z-index:-1;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
+    h1, h3, p, a{
+      font-family: "Poppins", sans-serif;
 
-       #wrapper {
-         background-color: #f0f6fb;
-       }
+    }
+    h2 {
+      font-family: "Yeseva One", sans-serif;
+      color:#390803;
+    }
+    img{
+      max-width: 80%;
+    }
 
-       #social > li {
-         display: inline;
-       }
+    header {
+      width: 98%;
+    }
 
-       #social > li > a > img {
-         max-width: 35px;
-       }
+    #wrapper {
+      background-color: #f0f6fb;
+    }
 
-       h1,
-       p {
-         margin: 3%;
-       }
-       .btn {
-         float:left;
-         position:relative;
-         height:50px;
-         width:100%;
-         width:100%;
-         margin: 0 2% 1.5% 0;
-         color: inherit;
-         text-decoration: underline;
-         font-weight: 800;
-         padding: 8px 0;
-         border-radius: 8px;
-         letter-spacing: 2px;
-       }
+    #social > li {
+      display: inline;
+    }
+
+    #social > li > a > img {
+      max-width: 35px;
+    }
+
+    h1,
+    p {
+      margin: 3%;
+    }
+    .btn {
+      float:left;
+      position:relative;
+      height:50px;
+      width:100%;
+      width:100%;
+      margin: 0 2% 1.5% 0;
+      color: inherit;
+      text-decoration: underline;
+      font-weight: 800;
+      padding: 8px 0;
+      border-radius: 8px;
+      letter-spacing: 2px;
+    }
+    #coverTitle
+    {
+      position: relative;
+      left:0;
+      width: 100%;
+    }
+    #logo,#cover
+    {
+      position: absolute;
+    }
+    #logo
+    {
+     margin-top:50px;
+      left:calc(50% - 250px);
+      width: 500px;
+      height: 49px;
+      flex-shrink: 0;
+      z-index: 11;
+    }
+    #cover
+    {
+      height: 800px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(25, 25, 25, 0.00) 78.11%, #191919 100%), url('https://marthamaymusic.com/mail0.jpg');
+      background-size:cover;
+      z-index: 10;
+
+    }
+
 
      </style>
   </head>
   <body>
-    <h1>DEBUT SINGLE RELEASE</h1>
-    <h2>- MARTHA MAY -</h2>
-    <h2>BREAKAWAY</h2>
-    <br>
-    <div id="cover">
+    <!-- <div id="cover">
         <img
           src="https://marthamaymusic.com/mail0.png"
           alt="mail0"
         />
+    </div> -->
+    <div id="coverTitle">
+
+      <div id="logo">
+        <img
+        src="https://www.marthamaymusic.com/logo_alt.svg"
+        alt="logo"
+        />
+      </div>
+
+      <div id="cover">
+      </div>
+
     </div>
 
     <a href="https://linktr.ee/marthamaymusic" class="btn">Breakaway on all streaming platforms</a>
@@ -101,7 +141,16 @@
     <div class="one-col">
 
     <h3>BIO</h3>
-
+    <div style="width: 515px; height: 2999px; background: #1A1A1A; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); flex-direction: column; justify-content: flex-start; align-items: center; gap: 404px; display: inline-flex">
+      <div style="width: 515px; height: 715px; background: linear-gradient(180deg, rgba(25, 25, 25, 0) 78%, #191919 100%)"></div>
+      <div style="width: 515px; height: 318.13px; background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #191919 100%); border-radius: 21px; border: 7px solid"></div>
+      <div style="height: 109px; padding-left: 31px; padding-right: 31px; padding-top: 11px; padding-bottom: 11px; background: rgba(55.25, 55.25, 55.25, 0.19); border-radius: 20px; border: 1px rgba(255, 255, 255, 0.16) solid; backdrop-filter: blur(50px); flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
+        <div style="text-align: center; color: white; font-size: 42px; font-family: Crimson Text; font-weight: 600; word-wrap: break-word">Birthday Wish</div>
+        <div style="text-align: center; color: white; font-size: 30px; font-family: Crimson Text; font-weight: 400; text-decoration: underline; word-wrap: break-word">Listen here</div>
+      </div>
+      <div style="width: 462.20px; height: 53px; box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25)"></div>
+      <div style="width: 515px; height: 910px; color: white; font-size: 23px; font-family: Inter; font-weight: 400; word-wrap: break-word">As the summer of ‘23 turns to a leafy fall, Martha May is set to deliver her forth slice of musical majesty onto the world. Following the powerful ‘Breakaway’, peppy bopper ‘Little Me’ and melancholic ballad ‘Distance’ (performed live on last year’s Croatian EuroVision National Final!), ‘Birthday Wish’ sees Martha soar into a whole new sonic landscape.<br/>Flowering from a darker place than her previous offerings, ‘Birthday Wish’ is Martha’s most personal piece to date. Confronting the pain of body dysmorphia, May’s lyrics approach this internal struggle with her own signature sense of optimism.<br/>Amid the sweeping strings and rich atmospherics, ‘Birthday Wish’ paints a picture of vulnerability that comes with intense self-doubt. With surface image defining us more than ever, the struggle for body acceptance can be a lonely, endless road.Yet Martha offers a soothing voice to the countless souls on this horrible journey. A voice that sings quite simply: ‘I’m right there with you!’<br/>Inspired by the introspective works of Lorde, Olivia Rodrigo, and Orla Gartland, ‘Birthday Wish’ is Martha May as you’ve never heard her before.<br/>Time to blow out the candles.<br/></div>
+    </div>
     <p>
       Hailing from the coastal city of Split,
       Croatia, Martha May is a heartfelt
@@ -123,7 +172,7 @@
 
     <div class="pics">
         <img
-          src="https://marthamaymusic.com/mail1.jpg"
+          src="https://www.marthamaymusic.com/mail1.jpg"
           alt="mail1"
           />
     </div>
@@ -131,7 +180,7 @@
 
     <div class="pics">
         <img
-          src="https://marthamaymusic.com/mail2.jpg"
+          src="https://www.marthamaymusic.com/mail2.jpg"
           alt="mail2"
         />
     </div>
