@@ -14,8 +14,7 @@
     margin: 0 auto;
     text-align:center;
     padding: 3%;
-    background-image:url("https://marthamaymusic.com/mail3.png");
-    background-image:url("mail4.png");
+    background-image:url("https://marthamaymusic.com/mail4.png");
     background-size:100% auto;
     background-position:0 0;
     background-repeat:repeat-y;
@@ -95,7 +94,6 @@
   }
   #cover
   {
-    background-image:url("mail0.png");
  
     position: relative;
     top: 0;
@@ -136,7 +134,7 @@
   top:-47px; 
   left: calc(50% - 200px);
 
-    background-image:url("Ellipse.png");
+    background-image:url("https://marthamaymusic.com/Ellipse.png");
   background-size:cover;
   
 }
