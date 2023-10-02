@@ -9,183 +9,183 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=IBM+Plex+Serif:wght@500&display=swap');
-      * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-      }
-      body {
-        background-color: #738EC3;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align:center;
-        padding: 3%;
-        background-image:url("https://marthamaymusic.com/nmail4.png");
-        background-size:100% auto;
-        background-position:0 0;
-        background-repeat:repeat-y;
-      }
-      #bg {
-        position:fixed;
-        z-index:-1;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-      }
-      img{
-        max-width: 80%;
-      }
 
-      header {
-        width: 98%;
-      }
+            @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=IBM+Plex+Serif:wght@500&display=swap');
+            * {
+              margin: 0;
+              padding: 0;
+              border: 0;
+            }
+            body {
+              background-color: #738EC3;
+              max-width: 800px;
+              margin: 0 auto;
+              text-align:center;
+              padding: 3%;
+              background-image:url("https://marthamaymusic.com/nmail4.png");
+              background-size:100% auto;
+              background-position:0 0;
+              background-repeat:repeat-y;
+            }
+            #bg {
+              position:fixed;
+              z-index:-1;
+              top:0;
+              left:0;
+              width:100%;
+              height:100%;
+            }
+            img{
+              max-width: 80%;
+            }
 
-      #wrapper {
-        background-color: #f0f6fb;
-      }
+            header {
+              width: 98%;
+            }
 
-      #social > li {
-        display: inline;
-      }
+            #wrapper {
+              background-color: #f0f6fb;
+            }
 
-      #social > li > a > img {
-        max-width: 35px;
-      }
+            #social > li {
+              display: inline;
+            }
 
-      h1,
-      p {
-        margin: 3%;
-      }
-      .btn {
-        float:left;
-        position:relative;
-        height:50px;
-        width:100%;
-        width:100%;
-        margin: 0 2% 1.5% 0;
-        color: inherit;
-        text-decoration: underline;
-        font-weight: 800;
-        padding: 8px 0;
-        border-radius: 8px;
-        letter-spacing: 2px;
-      }
-      #coverTitle
-      {
-        position: relative;
-        left:0;
-        width: 100%;
-      }
+            #social > li > a > img {
+              max-width: 35px;
+            }
 
-      #logo
-      {
-        position: relative;
-        margin-top:50px;
-        margin-left:calc(50% - 250px);
-        margin-bottom: 40px;
-        width: 500px;
-        flex-shrink: 0;
-        z-index: 11;
-      }
-      #cover
-      {
+            h1,
+            p {
+              margin: 3%;
+            }
+            .btn {
+              float:left;
+              position:relative;
+              height:50px;
+              width:100%;
+              width:100%;
+              margin: 0 2% 1.5% 0;
+              color: inherit;
+              text-decoration: underline;
+              font-weight: 800;
+              padding: 8px 0;
+              border-radius: 8px;
+              letter-spacing: 2px;
+            }
+            #coverTitle
+            {
+              position: relative;
+              left:0;
+              width: 100%;
+            }
 
-        position: relative;
-        width: 100%;
-        max-width: unset;
-        background-size:cover;
-        z-index: 10;
+            #logo
+            {
+              position: relative;
+              margin-top:50px;
+              margin-left:calc(50% - 250px);
+              margin-bottom: 40px;
+              width: 500px;
+              flex-shrink: 0;
+              z-index: 11;
+            }
+            #cover
+            {
 
-      }
-      #title,#listen,.bigText
-      {
-        font-family: 'BIZ UDPMincho', serif;
-        color:#FFFFFF;
-      }
-      #title
-      {
-        padding:10px;
-        font-size: 30px;
+              position: relative;
+              width: 100%;
+              max-width: unset;
+              background-size:cover;
+              z-index: 10;
 
-      }
-      #listenBtn
-      {
-        position: relative;
-        height: auto;
-        width: 400px;
-        left: calc(50% - 240px);
-        font-size: 40px;
-        padding:40px;
-        margin-bottom: 50px;
-        z-index: 10;
-      }
-      .circle
-      {
-        position: absolute;
-        height: 217px;
-        width: 400px;
-        top:-47px;
-        margin-left:0%;
+            }
+            #title,#listen,.bigText
+            {
+              font-family: 'BIZ UDPMincho', serif;
+              color:#FFFFFF;
+            }
+            #title
+            {
+              padding:10px;
+              font-size: 30px;
 
-        background-image:url("https://marthamaymusic.com/mCircle.png");
-        background-size:cover;
+            }
+            #listenBtn
+            {
+              position: relative;
+              width: 80%;
+              font-size: 40px;
+              margin-top: -50px;
+              margin-bottom: -50px;
+              z-index: 10;
+            }
+            .circle
+            {
+              position: absolute;
+              height: 217px;
+              width: 400px;
+              top:-47px;
+              margin-left:0%;
 
-      }
-      .squiggly
-      {
-        padding: 40px;
-        width: 220px;
-      }
-      .pic
-      {
+              background-image:url("https://marthamaymusic.com/mCircle.png");
+              background-size:cover;
 
-        border-radius:10px;
-        border:0px solid white;
-        /*
-        border-radius: 0px;
-        outline:20px solid white;
-        */
-      }
-      .desc,.bigText
-      {
-        margin-left:10%;
+            }
+            .squiggly
+            {
+              padding: 40px;
+              width: 220px;
+            }
+            .pic
+            {
 
-        text-align: left;
-        width: 80%;
+              border-radius:10px;
+              border:0px solid white;
+              /*
+              border-radius: 0px;
+              outline:20px solid white;
+              */
+            }
+            .desc,.bigText
+            {
+              margin-left:10%;
 
-      }
-      .bigText
-      {
-        font-size: 85px;
-      }
-      .desc
-      {
+              text-align: left;
+              width: 80%;
 
-        font-family: 'IBM Plex Serif', serif;
-        color:#FFFFFF;
-        font-size: 20px;
-      }
-      .desc:last-of-type
-      {
-        font-size:25px;
-        font-family: 'BIZ UDPMincho', serif;
-        text-align: center;
-      }
-      #socials
-      {
+            }
+            .bigText
+            {
+              font-size: 85px;
+            }
+            .desc
+            {
 
-        height: 100px;
-        margin-left:calc(50% - 130px);
-        width: 260px;
-      }
-      .socials
-      {
-        width: 45px;
-        padding:20px;
-        float: left;
-      }
+              font-family: 'IBM Plex Serif', serif;
+              color:#FFFFFF;
+              font-size: 20px;
+            }
+            .desc:last-of-type
+            {
+              font-size:25px;
+              font-family: 'BIZ UDPMincho', serif;
+              text-align: center;
+            }
+            #socials
+            {
+
+              height: 100px;
+              margin-left:calc(50% - 130px);
+              width: 260px;
+            }
+            .socials
+            {
+              width: 45px;
+              padding:20px;
+              float: left;
+            }
+          
     </style>
   </head>
   <body>
@@ -203,10 +203,9 @@
         <!-- <div id="title">Birthday Wish</div> -->
       </div>
       <img id="cover" class="pic" src="https://marthamaymusic.com/mail0.jpg" alt="cover">
-      <div id="listenBtn">
+      <img id="listenBtn" src="https://marthamaymusic.com/mCircle.png"/>
         <!-- <div id="listen">Listen here</div> -->
-        <div class="circle"></div>
-      </div>
+        <!-- <div class="circle"></div> -->
       <img class="pic" src="https://marthamaymusic.com/nmail1.jpg" alt="pic1">
 
       <img class="squiggly" src="https://marthamaymusic.com/Squiggly.png" alt="squiggly">
