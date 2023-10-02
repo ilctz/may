@@ -78,16 +78,14 @@
         left:0;
         width: 100%;
       }
-      #logo,#cover
-      {
-        position: absolute;
-      }
+
       #logo
       {
+        position: relative;
         margin-top:50px;
-        left:calc(50% - 250px);
+        margin-left:calc(50% - 250px);
+        margin-bottom: 40px;
         width: 500px;
-        height: 49px;
         flex-shrink: 0;
         z-index: 11;
       }
@@ -95,8 +93,6 @@
       {
 
         position: relative;
-        top: 0;
-        left:0;
         width: 100%;
         max-width: unset;
         background-size:cover;
@@ -131,7 +127,7 @@
         height: 217px;
         width: 400px;
         top:-47px;
-        left: calc(50% - 200px);
+        margin-left:0%;
 
         background-image:url("https://marthamaymusic.com/Ellipse.png");
         background-size:cover;
@@ -204,7 +200,7 @@
 
       <div id="logo">
         <img src="https://marthamaymusic.com/birthdayWish_title.png" alt="logo"/>
-        <div id="title">Birthday Wish</div>
+        <!-- <div id="title">Birthday Wish</div> -->
       </div>
       <img id="cover" class="pic" src="https://marthamaymusic.com/mail0.jpg" alt="cover">
       <div id="listenBtn">
